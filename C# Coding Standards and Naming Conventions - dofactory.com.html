@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.dofactory.com/reference/csharp-coding-standards -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>C# Coding Standards and Naming Conventions - dofactory.com</title>
+    <meta name="keywords">
+    <meta name="description" content="C# Coding Standards and Naming Conventions">
+    <link rel="icon" type="image/png" href="http://www.dofactory.com/favicon.ico">
+
+    <link href="./C# Coding Standards and Naming Conventions - dofactory.com_files/prettify.css" rel="stylesheet">
+<link href="./C# Coding Standards and Naming Conventions - dofactory.com_files/font-awesome.min.css" rel="stylesheet">
+<link href="./C# Coding Standards and Naming Conventions - dofactory.com_files/bootstrap.css" rel="stylesheet">
+<link href="./C# Coding Standards and Naming Conventions - dofactory.com_files/app.css" rel="stylesheet">
+
+    <script async="" src="./C# Coding Standards and Naming Conventions - dofactory.com_files/analytics.js.download"></script><script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/modernizr-2.6.2.js.download"></script>
+<script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/modernizr-2.7.2.js.download"></script>
+
+
+    <meta name="copyright" content="(c) Copyright 2017 Dofactory. All rights reserved.">
+
+<style type="text/css">.dropdown-submenu:hover>.dropdown-menu{display:none}</style></head>
+<body>
+
+    
+<div class="org-darkorange" style="height:70px;">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="pull-left " style="position:relative;height:70px; width:81px;">
+                <div style="position:absolute;top:0;left:10px;width:81px;height:90px;background:#ebe4d9;box-shadow: 1px 2px 2px rgba(68,17,0,0.5);">
+                    <a href="http://www.dofactory.com/"><img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/logo2.png" style="width:67px;height:67px;margin:10px 0 0 8px;"></a>
+                </div>
+            </div>
+            <div class="pull-left hidden-xs" style="height:70px;">
+                <a href="http://www.dofactory.com/">
+                    <img style="margin: 20px 0 0 30px; width: 130px; height: 32px;" src="./C# Coding Standards and Naming Conventions - dofactory.com_files/dofactory2.png" alt="">
+                </a>
+            </div>
+            <div class="pull-right">
+                <div style="height:36px;margin-top:18px;padding:5px 10px 5px 5px;">
+                        <a style="color:#f5f1f1;" class="btn btn-darkbrown" href="http://www.dofactory.com/login.aspx">Login</a><span>&nbsp;&nbsp;&nbsp;</span>
+                        <a style="color:#f5f1f1;" class="btn btn-darkbrown" href="http://www.dofactory.com/join.aspx">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gray" style="height:35px;">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="pull-right visible-xs">
+                <a href="javascript:void(0);"><img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/hamburger.png" style="margin:8px 8px;" onclick="$(&#39;#small-menus&#39;).slideToggle();"></a>
+            </div>
+
+            <div class="pull-left hidden-xs" style="width:87px;height:35px;">
+
+            </div>
+            <div class="pull-left hidden-xs ">
+                <div>
+                    <ul class="nav nav-pills nav-menu-pills" style="padding: 0px 0 0 20px;">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle disable domenu" data-hover="dropdown" data-target="#" href="http://www.dofactory.com/products/products.aspx">Products</a>
+                            <ul class="dropdown-menu" style="background: #aaa091;">
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/products">All Products and Pricing</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/products/net-design-pattern-framework">.NET Design Pattern Framework <sup>TM</sup> 4.5 -- C# Edition</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/products/net-design-pattern-framework">.NET Design Pattern Framework <sup>TM</sup> 4.5 -- VB Edition</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/products/pro-net-design-pattern-framework">PRO .NET Design Pattern Framework <sup>TM</sup> 4.5 -- C# Edition</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/products/pro-net-design-pattern-framework">PRO .NET Design Pattern Framework <sup>TM</sup> 4.5 -- VB Edition</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/products/javascript-jquery-design-pattern-framework">JavaScript + jQuery Pattern Framework <sup>TM</sup></a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/products/sql-database-design-pattern-framework">SQL + Database Pattern Framework <sup>TM</sup></a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/products/sql-database-design-pattern-framework">PRO SQL + Database Pattern Framework <sup>TM</sup></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle disable domenu" data-hover="dropdown" data-target="#" href="http://www.dofactory.com/customers">Customers</a>
+                            <ul class="dropdown-menu" style="background: #aaa091;">
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/customers/">Meet our Customers</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/customers/stories">Success Stories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle disable domenu" data-hover="dropdown" data-target="#" href="http://www.dofactory.com/reference">Reference Guides</a>
+                            <ul class="dropdown-menu" style="background: #aaa091;">
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/net/design-patterns">.NET Design Patterns</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/javascript/design-patterns">JavaScript Design Patterns</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/tutorial/javascript">JavaScript Tutorial</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/sql/tutorial">SQL Tutorial</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/reference/connection-strings">Connection Strings</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/reference/visual-studio-shortcuts">Visual Studio Shortcuts</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/reference/csharp-coding-standards">C# Coding Standards</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/reference/html-color-codes">HTML Color Codes</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/reference">All References</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle disable domenu" data-hover="dropdown" data-target="#" href="http://www.dofactory.com/topic/search.aspx">Community</a>
+                            <ul class="dropdown-menu" style="background: #aaa091;">
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/topic/search.aspx">Questions</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/topic/add.aspx">Ask Question</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/topic/topics.aspx">Explore</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/tag/tags.aspx">Tags</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/user/users.aspx">Users</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle disable domenu" data-hover="dropdown" data-target="#" href="http://www.dofactory.com/about">About Us</a>
+                            <ul class="dropdown-menu" style="background: #aaa091;">
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/about">Company</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/story">Our Story</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/services">Services</a></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/training">Training</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a class="menu-item" href="http://www.dofactory.com/contact">Contact Us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="visible-xs" style="clear:both;">
+    <div id="small-menus" class="gray" style="display:none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12" style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a onclick="$(&#39;#menus-1&#39;).slideToggle();" class="domenu" href="javascript:void(0);">Products</a></div>
+                <div id="menus-1" class="col-xs-12" style="display:none;">
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/products">All Products and Pricing</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/products/net-design-pattern-framework">.NET Design Pattern Framework <sup>TM</sup> 4.5 -- C# Edition</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/products/net-design-pattern-framework">.NET Design Pattern Framework <sup>TM</sup> 4.5 -- VB Edition</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/products/pro-net-design-pattern-framework">PRO .NET Design Pattern Framework <sup>TM</sup> 4.5 -- C# Edition</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/products/pro-net-design-pattern-framework">PRO .NET Design Pattern Framework <sup>TM</sup> 4.5 -- VB Edition</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/products/javascript-jquery-design-pattern-framework">JavaScript + jQuery Pattern Framework <sup>TM</sup></a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/products/sql-database-design-pattern-framework">SQL + Database Pattern Framework <sup>TM</sup></a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/products/sql-database-design-pattern-framework">PRO SQL + Database Pattern Framework <sup>TM</sup></a></div>
+                </div>
+                <div class="col-xs-12" style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a onclick="$(&#39;#menus-2&#39;).slideToggle();" class="domenu" href="javascript:void(0);">Customers</a></div>
+                <div id="menus-2" class="col-xs-12" style="display:none;">
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/customers/">Meet our Customers</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/customers/stories">Success Stories</a></div>
+                </div>
+                <div class="col-xs-12" style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a onclick="$(&#39;#menus-3&#39;).slideToggle();" class="domenu" href="javascript:void(0);">Reference Guides</a></div>
+                <div id="menus-3" class="col-xs-12" style="display:none;">
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/net/design-patterns">.NET Design Patterns</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/javascript/design-patterns">JavaScript Design Patterns</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/tutorial/javascript">JavaScript Tutorial</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/sql/tutorial">SQL Tutorial</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/reference/connection-strings">Connection Strings</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/reference/visual-studio-shortcuts">Visual Studio Shortcuts</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/reference/csharp-coding-standards">C# Coding Standards</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/reference/html-color-codes">HTML Color Codes</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/reference">All References</a></div>
+                </div>
+                <div class="col-xs-12" style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a onclick="$(&#39;#menus-4&#39;).slideToggle();" class="domenu" href="javascript:void(0);">Community</a></div>
+                <div id="menus-4" class="col-xs-12" style="display:none;">
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/topic/search.aspx">Questions</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/topic/add.aspx">Ask Question</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/topic/topics.aspx">Explore</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/tag/tags.aspx">Tags</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/user/users.aspx">Users</a></div>
+                </div>
+                <div class="col-xs-12" style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a onclick="$(&#39;#menus-5&#39;).slideToggle();" class="domenu" href="javascript:void(0);">About Us</a></div>
+                <div id="menus-5" class="col-xs-12" style="display:none;">
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/about">Company</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/story">Our Story</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/services">Services</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/training">Training</a></div>
+                    <div style="border-top: 1px solid #ccc;padding:7px 0 7px 20px;"><a class="domenu" href="http://www.dofactory.com/contact">Contact Us</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <input type="hidden" id="alert-delay">
+
+
+
+    
+<style>
+    .do-this
+{
+  font-size :24px;
+  background:#6e9286;
+  color:white;
+  margin:0 8px 0 0 ;
+  padding:4px 6px;
+  border-radius:3px;
+}
+
+.donot-this
+{
+  font-size :24px;
+  background:#b06262;
+  color:white;
+  margin:0 8px 0 0 ;
+padding:4px 6px;
+border-radius:3px;
+}
+
+.avoid-this
+{
+  font-size :24px;
+  background:#686893;
+  color:white;
+  margin:0 8px 0 0 ;
+  border-radius:3px;
+ padding:4px 6px;
+}
+
+.separator
+{
+    height:3px;
+    margin:50px 0;
+    border-bottom:solid 1px #aaa;
+}
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <br><br>
+            <div class="row" style="color:#555;">
+                <div class="col-xs-12 col-sm-8" style="padding:0 15px; ">
+
+                    <h1 style="font-size:30px;color:#666;">C# Coding Standards and Naming Conventions</h1>
+
+                    <br><br>
+
+                    <p style="color:#666;padding:0 0 10px 2px;">
+                        Below are our <b>C# coding standards</b>, naming conventions, and best practices.<br>
+                        Use these in your own projects and/or adjust these to your own needs.
+                    </p>
+                    
+
+                    <br>
+                   
+                    <hr class="hr-orange">
+                    <br>
+                    <span class="do-this">do</span>use <b>PascalCasing</b> for class names and method names.
+
+<pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">ClientActivity</span></li><li class="L1"><span class="pun">{</span></li><li class="L2"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">ClearStatistics</span><span class="pun">()</span></li><li class="L3"><span class="pln">    </span><span class="pun">{</span></li><li class="L4"><span class="pln">        </span><span class="com">//...</span></li><li class="L5"><span class="pln">    </span><span class="pun">}</span></li><li class="L6"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">CalculateStatistics</span><span class="pun">()</span></li><li class="L7"><span class="pln">    </span><span class="pun">{</span></li><li class="L8"><span class="pln">        </span><span class="com">//...</span></li><li class="L9"><span class="pln">    </span><span class="pun">}</span></li><li class="L0"><span class="pun">}</span></li></ol></pre>
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework and easy to read.<br>
+
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="do-this">do</span>use <b>camelCasing</b> for method arguments and local variables.
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">UserLog</span></li><li class="L1"><span class="pun">{</span></li><li class="L2"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Add</span><span class="pun">(</span><span class="typ">LogEvent</span><span class="pln"> logEvent</span><span class="pun">)</span></li><li class="L3"><span class="pln">    </span><span class="pun">{</span></li><li class="L4"><span class="pln">        </span><span class="kwd">int</span><span class="pln"> itemCount </span><span class="pun">=</span><span class="pln"> logEvent</span><span class="pun">.</span><span class="typ">Items</span><span class="pun">.</span><span class="typ">Count</span><span class="pun">;</span></li><li class="L5"><span class="pln">        </span><span class="com">// ...</span></li><li class="L6"><span class="pln">    </span><span class="pun">}</span></li><li class="L7"><span class="pun">}</span></li></ol></pre>
+
+                    
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework and easy to read.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="donot-this">do not</span>use <b>Hungarian</b> notation or any other type identification in identifiers
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Correct</span></li><li class="L1"><span class="kwd">int</span><span class="pln"> counter</span><span class="pun">;</span></li><li class="L2"><span class="kwd">string</span><span class="pln"> name</span><span class="pun">;</span></li><li class="L3"><span class="pln"> </span></li><li class="L4"><span class="com">// Avoid</span></li><li class="L5"><span class="kwd">int</span><span class="pln"> iCounter</span><span class="pun">;</span></li><li class="L6"><span class="kwd">string</span><span class="pln"> strName</span><span class="pun">;</span></li></ol></pre>
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework and Visual Studio IDE makes determining types very easy (via tooltips).
+                    In general you want to avoid type indicators in any identifier.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="donot-this">do not</span>use <b>Screaming Caps</b> for constants or readonly variables
+
+<pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Correct</span></li><li class="L1"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="typ">ShippingType</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"DropShip"</span><span class="pun">;</span></li><li class="L2"><span class="pln"> </span></li><li class="L3"><span class="com">// Avoid</span></li><li class="L4"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> SHIPPINGTYPE </span><span class="pun">=</span><span class="pln"> </span><span class="str">"DropShip"</span><span class="pun">;</span></li></ol></pre>
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework. Caps grap too much attention.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="avoid-this">avoid</span>using <b>Abbreviations</b>.
+                    Exceptions: abbreviations commonly used as names, such as <b>Id, Xml, Ftp, Uri</b>
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Correct</span></li><li class="L1"><span class="typ">UserGroup</span><span class="pln"> userGroup</span><span class="pun">;</span></li><li class="L2"><span class="typ">Assignment</span><span class="pln"> employeeAssignment</span><span class="pun">;</span></li><li class="L3"><span class="pln"> </span></li><li class="L4"><span class="com">// Avoid</span></li><li class="L5"><span class="typ">UserGroup</span><span class="pln"> usrGrp</span><span class="pun">;</span></li><li class="L6"><span class="typ">Assignment</span><span class="pln"> empAssignment</span><span class="pun">;</span></li><li class="L7"><span class="pln"> </span></li><li class="L8"><span class="com">// Exceptions</span></li><li class="L9"><span class="typ">CustomerId</span><span class="pln"> customerId</span><span class="pun">;</span></li><li class="L0"><span class="typ">XmlDocument</span><span class="pln"> xmlDocument</span><span class="pun">;</span></li><li class="L1"><span class="typ">FtpHelper</span><span class="pln"> ftpHelper</span><span class="pun">;</span></li><li class="L2"><span class="typ">UriPart</span><span class="pln"> uriPart</span><span class="pun">;</span></li></ol></pre>
+
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework and prevents inconsistent abbreviations.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="do-this">do</span>use <b>PascalCasing</b> for abbreviations 3 characters or more (2 chars are both uppercase)
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="typ">HtmlHelper</span><span class="pln"> htmlHelper</span><span class="pun">;</span></li><li class="L1"><span class="typ">FtpTransfer</span><span class="pln"> ftpTransfer</span><span class="pun">;</span></li><li class="L2"><span class="typ">UIControl</span><span class="pln"> uiControl</span><span class="pun">;</span></li></ol></pre>
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework. Caps would grap visually too much attention.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+
+                    <span class="donot-this">do not</span>use <b>Underscores</b> in identifiers.
+                    Exception: you can prefix private static variables <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    with an underscore.
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Correct</span></li><li class="L1"><span class="kwd">public</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pln"> clientAppointment</span><span class="pun">;</span></li><li class="L2"><span class="kwd">public</span><span class="pln"> </span><span class="typ">TimeSpan</span><span class="pln"> timeLeft</span><span class="pun">;</span></li><li class="L3"><span class="pln"> </span></li><li class="L4"><span class="com">// Avoid</span></li><li class="L5"><span class="kwd">public</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pln"> client_Appointment</span><span class="pun">;</span></li><li class="L6"><span class="kwd">public</span><span class="pln"> </span><span class="typ">TimeSpan</span><span class="pln"> time_Left</span><span class="pun">;</span></li><li class="L7"><span class="pln"> </span></li><li class="L8"><span class="com">// Exception</span></li><li class="L9"><span class="kwd">private</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pln"> _registrationDate</span><span class="pun">;</span></li></ol></pre>
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework and makes code more natural to read (without 'slur').
+                    Also avoids underline stress (inability to see underline).<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="do-this">do</span>use <b>predefined type names</b> instead of system type names like Int16, Single, UInt64, etc<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Correct</span></li><li class="L1"><span class="kwd">string</span><span class="pln"> firstName</span><span class="pun">;</span></li><li class="L2"><span class="kwd">int</span><span class="pln"> lastIndex</span><span class="pun">;</span></li><li class="L3"><span class="kwd">bool</span><span class="pln"> isSaved</span><span class="pun">;</span></li><li class="L4"><span class="pln"> </span></li><li class="L5"><span class="com">// Avoid</span></li><li class="L6"><span class="typ">String</span><span class="pln"> firstName</span><span class="pun">;</span></li><li class="L7"><span class="typ">Int32</span><span class="pln"> lastIndex</span><span class="pun">;</span></li><li class="L8"><span class="typ">Boolean</span><span class="pln"> isSaved</span><span class="pun">;</span></li></ol></pre>
+
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework and makes code more natural to read.
+                    <br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+
+                    <span class="do-this">do</span>use implicit type <b>var</b> for local variable declarations.
+                    Exception: primitive types (int, string, <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    double, etc) use predefined names.
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="kwd">var</span><span class="pln"> stream </span><span class="pun">=</span><span class="pln"> </span><span class="typ">File</span><span class="pun">.</span><span class="typ">Create</span><span class="pun">(</span><span class="pln">path</span><span class="pun">);</span></li><li class="L1"><span class="kwd">var</span><span class="pln"> customers </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Dictionary</span><int?, customer=""><span class="pun">();</span></int?,></li><li class="L2"><int?, customer=""><span class="pln"> </span></int?,></li><li class="L3"><int?, customer=""><span class="com">// Exceptions</span></int?,></li><li class="L4"><int?, customer=""><span class="kwd">int</span><span class="pln"> index </span><span class="pun">=</span><span class="pln"> </span><span class="lit">100</span><span class="pun">;</span></int?,></li><li class="L5"><int?, customer=""><span class="kwd">string</span><span class="pln"> timeSheet</span><span class="pun">;</span></int?,></li><li class="L6"><int?, customer=""><span class="kwd">bool</span><span class="pln"> isCompleted</span><span class="pun">;</span></int?,></li></ol></pre>
+
+
+                    <b>Why</b>: removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="do-this">do</span>use noun or noun phrases to name a class.
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Employee</span></li><li class="L1"><span class="pun">{</span></li><li class="L2"><span class="pun">}</span></li><li class="L3"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">BusinessLocation</span></li><li class="L4"><span class="pun">{</span></li><li class="L5"><span class="pun">}</span></li><li class="L6"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">DocumentCollection</span></li><li class="L7"><span class="pun">{</span></li><li class="L8"><span class="pun">}</span></li></ol></pre>
+
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework and easy to remember.<br>
+
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="do-this">do</span>prefix interfaces with the letter <span style="font-family:Courier; font-weight:bold;">I</span>. &nbsp;Interface names are noun (phrases) or adjectives.<br>
+
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">interface</span><span class="pln"> </span><span class="typ">IShape</span></li><li class="L1"><span class="pun">{</span></li><li class="L2"><span class="pun">}</span></li><li class="L3"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">interface</span><span class="pln"> </span><span class="typ">IShapeCollection</span></li><li class="L4"><span class="pun">{</span></li><li class="L5"><span class="pun">}</span></li><li class="L6"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">interface</span><span class="pln"> </span><span class="typ">IGroupable</span></li><li class="L7"><span class="pun">{</span></li><li class="L8"><span class="pun">}</span></li></ol></pre>
+
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="do-this">do</span>name source files according to their main classes.
+                    Exception: file names with partial classes<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    reflect their source or purpose, e.g. designer, generated, etc.
+
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Located in Task.cs</span></li><li class="L1"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">partial</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Task</span></li><li class="L2"><span class="pun">{</span></li><li class="L3"><span class="pln">    </span><span class="com">//...</span></li><li class="L4"><span class="pun">}</span></li></ol></pre>
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Located in Task.generated.cs</span></li><li class="L1"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">partial</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Task</span></li><li class="L2"><span class="pun">{</span></li><li class="L3"><span class="pln">    </span><span class="com">//...</span></li><li class="L4"><span class="pun">}</span></li></ol></pre>
+
+
+                    <b>Why</b>: consistent with the Microsoft practices. Files are alphabetically sorted and partial classes remain adjacent.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+
+                    <span class="do-this">do</span>organize namespaces with a clearly defined structure
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Examples</span></li><li class="L1"><span class="kwd">namespace</span><span class="pln"> </span><span class="typ">Company</span><span class="pun">.</span><span class="typ">Product</span><span class="pun">.</span><span class="typ">Module</span><span class="pun">.</span><span class="typ">SubModule</span></li><li class="L2"><span class="kwd">namespace</span><span class="pln"> </span><span class="typ">Product</span><span class="pun">.</span><span class="typ">Module</span><span class="pun">.</span><span class="typ">Component</span></li><li class="L3"><span class="kwd">namespace</span><span class="pln"> </span><span class="typ">Product</span><span class="pun">.</span><span class="typ">Layer</span><span class="pun">.</span><span class="typ">Module</span><span class="pun">.</span><span class="typ">Group</span></li></ol></pre>
+
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework. Maintains good organization of your code base.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="do-this">do</span>vertically align curly brackets.
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Correct</span></li><li class="L1"><span class="kwd">class</span><span class="pln"> </span><span class="typ">Program</span></li><li class="L2"><span class="pun">{</span></li><li class="L3"><span class="pln">    </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Main</span><span class="pun">(</span><span class="kwd">string</span><span class="pun">[]</span><span class="pln"> args</span><span class="pun">)</span></li><li class="L4"><span class="pln">    </span><span class="pun">{</span></li><li class="L5"><span class="pln">    </span><span class="pun">}</span></li><li class="L6"><span class="pun">}</span></li></ol></pre>
+
+
+                    <b>Why</b>: Microsoft has a different standard, but developers have overwhelmingly preferred vertically aligned brackets.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="do-this">do</span>declare all member variables at the top of a class, with static variables at the very top.
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Correct</span></li><li class="L1"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Account</span></li><li class="L2"><span class="pun">{</span></li><li class="L3"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="typ">BankName</span><span class="pun">;</span></li><li class="L4"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">decimal</span><span class="pln"> </span><span class="typ">Reserves</span><span class="pun">;</span></li><li class="L5"><span class="pln"> </span></li><li class="L6"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="typ">Number</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">get</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">set</span><span class="pun">;}</span></li><li class="L7"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pln"> </span><span class="typ">DateOpened</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">get</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">set</span><span class="pun">;}</span></li><li class="L8"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pln"> </span><span class="typ">DateClosed</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">get</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">set</span><span class="pun">;}</span></li><li class="L9"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">decimal</span><span class="pln"> </span><span class="typ">Balance</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">get</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">set</span><span class="pun">;}</span></li><li class="L0"><span class="pln"> </span></li><li class="L1"><span class="pln">    </span><span class="com">// Constructor</span></li><li class="L2"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">Account</span><span class="pun">()</span></li><li class="L3"><span class="pln">    </span><span class="pun">{</span></li><li class="L4"><span class="pln">        </span><span class="com">// ...</span></li><li class="L5"><span class="pln">    </span><span class="pun">}</span></li><li class="L6"><span class="pun">}</span></li></ol></pre>
+
+
+                    <b>Why</b>: generally accepted practice that prevents the need to hunt for variable declarations.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+
+                    <span class="do-this">do</span>use singular names for enums. Exception: bit field enums.
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Correct</span></li><li class="L1"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">enum</span><span class="pln"> </span><span class="typ">Color</span></li><li class="L2"><span class="pun">{</span></li><li class="L3"><span class="pln">    </span><span class="typ">Red</span><span class="pun">,</span></li><li class="L4"><span class="pln">    </span><span class="typ">Green</span><span class="pun">,</span></li><li class="L5"><span class="pln">    </span><span class="typ">Blue</span><span class="pun">,</span></li><li class="L6"><span class="pln">    </span><span class="typ">Yellow</span><span class="pun">,</span></li><li class="L7"><span class="pln">    </span><span class="typ">Magenta</span><span class="pun">,</span></li><li class="L8"><span class="pln">    </span><span class="typ">Cyan</span></li><li class="L9"><span class="pun">}</span></li><li class="L0"><span class="pln"> </span></li><li class="L1"><span class="com">// Exception</span></li><li class="L2"><span class="pun">[</span><span class="typ">Flags</span><span class="pun">]</span></li><li class="L3"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">enum</span><span class="pln"> </span><span class="typ">Dockings</span></li><li class="L4"><span class="pun">{</span></li><li class="L5"><span class="pln">    </span><span class="kwd">None</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span></li><li class="L6"><span class="pln">    </span><span class="typ">Top</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span></li><li class="L7"><span class="pln">    </span><span class="typ">Right</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span></li><li class="L8"><span class="pln">    </span><span class="typ">Bottom</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span></li><li class="L9"><span class="pln">    </span><span class="typ">Left</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">8</span></li><li class="L0"><span class="pun">}</span></li></ol></pre>
+
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework and makes the code more natural to read. Plural flags because enum can hold multiple values (using bitwise 'OR').<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="donot-this">do not</span>explicitly specify a type of an enum or values of enums (except bit fields)
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Don't</span></li><li class="L1"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">enum</span><span class="pln"> </span><span class="typ">Direction</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">long</span></li><li class="L2"><span class="pun">{</span></li><li class="L3"><span class="pln">    </span><span class="typ">North</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span></li><li class="L4"><span class="pln">    </span><span class="typ">East</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span></li><li class="L5"><span class="pln">    </span><span class="typ">South</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span></li><li class="L6"><span class="pln">    </span><span class="typ">West</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">4</span></li><li class="L7"><span class="pun">}</span></li><li class="L8"><span class="pln"> </span></li><li class="L9"><span class="com">// Correct</span></li><li class="L0"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">enum</span><span class="pln"> </span><span class="typ">Direction</span></li><li class="L1"><span class="pun">{</span></li><li class="L2"><span class="pln">    </span><span class="typ">North</span><span class="pun">,</span></li><li class="L3"><span class="pln">    </span><span class="typ">East</span><span class="pun">,</span></li><li class="L4"><span class="pln">    </span><span class="typ">South</span><span class="pun">,</span></li><li class="L5"><span class="pln">    </span><span class="typ">West</span></li><li class="L6"><span class="pun">}</span></li></ol></pre>
+
+
+
+                    <b>Why</b>: can create confusion when relying on actual types and values.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    <br><br>
+
+                    <span class="donot-this">do not</span>suffix enum names with Enum
+
+                    <pre class="prettyprint linenums run code-hscroll"><ol class="linenums"><li class="L0"><span class="com">// Don't</span></li><li class="L1"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">enum</span><span class="pln"> </span><span class="typ">CoinEnum</span></li><li class="L2"><span class="pun">{</span></li><li class="L3"><span class="pln">    </span><span class="typ">Penny</span><span class="pun">,</span></li><li class="L4"><span class="pln">    </span><span class="typ">Nickel</span><span class="pun">,</span></li><li class="L5"><span class="pln">    </span><span class="typ">Dime</span><span class="pun">,</span></li><li class="L6"><span class="pln">    </span><span class="typ">Quarter</span><span class="pun">,</span></li><li class="L7"><span class="pln">    </span><span class="typ">Dollar</span></li><li class="L8"><span class="pun">}</span></li><li class="L9"><span class="pln"> </span></li><li class="L0"><span class="com">// Correct</span></li><li class="L1"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">enum</span><span class="pln"> </span><span class="typ">Coin</span></li><li class="L2"><span class="pun">{</span></li><li class="L3"><span class="pln">    </span><span class="typ">Penny</span><span class="pun">,</span></li><li class="L4"><span class="pln">    </span><span class="typ">Nickel</span><span class="pun">,</span></li><li class="L5"><span class="pln">    </span><span class="typ">Dime</span><span class="pun">,</span></li><li class="L6"><span class="pln">    </span><span class="typ">Quarter</span><span class="pun">,</span></li><li class="L7"><span class="pln">    </span><span class="typ">Dollar</span></li><li class="L8"><span class="pun">}</span></li></ol></pre>
+
+
+                    <b>Why</b>: consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.<br>
+                    <br><br>
+                    <hr class="hr-orange">
+                    
+                    
+                    <br>
+
+
+
+                </div>
+                <div class="col-xs-12 col-sm-4" style="padding:0 35px; ">
+                    <div class="hidden-xs" style="margin-left:20px;border-left:1px solid #ddd;margin-top:67px;">
+                        <div class="ctr">
+                            <div style="margin-left:10px; border-left:0px solid #bbb;">
+
+    <table style="width:210px;">
+        <tbody><tr>
+            <td style="text-align:center;">
+                <br><br>
+
+
+                <div style="margin:0 0 0 45px; text-align:left;">
+                    <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/circular_arrow.png" style="vertical-align:middle;" alt="">&nbsp;&nbsp;&nbsp;Better Code&nbsp;<br>
+                    <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/circular_arrow.png" style="vertical-align:middle;" alt="">&nbsp;&nbsp;&nbsp;Better Career&nbsp;<br>
+                    <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/circular_arrow.png" style="vertical-align:middle;" alt="">&nbsp;&nbsp;&nbsp;Better Lifestyle&nbsp;<br>
+                </div>
+
+                <br><br>
+
+
+                <a href="http://www.dofactory.com/products/net-design-pattern-framework" class="alwaysonb" style="color:#666;font-size:14pt;line-height:22pt; font-weight:bold;">
+                    .NET<br>Design Pattern<br>Framework 4.5
+                </a>
+
+                <br><br>
+                <a href="http://www.dofactory.com/products/net-design-pattern-framework">
+                    <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/dotnet_cs_4.5_box1 190x277 cropped noshade.png" width="170" alt=".NET Design Pattern Framework 4.5" style="margin-left:10px;padding-top:4px;">
+                </a>
+                <br>
+                <a href="http://www.dofactory.com/products/net-design-pattern-framework" class="alwaysonb" style="color:#666;font-size:16px;"><b>C# and VB</b></a>
+                <br><br>
+
+                <table>
+                    <tbody><tr>
+                        <td>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="background:#ffffff;color:#666; font-weight:bold;">Includes:</span><br><br>
+                            <div style="text-align:left; padding: 0 0 0 10px;">
+                                <ul>
+                                    <li>Gang of Four Patterns</li>
+                                    <li>Head First Patterns</li>
+                                    <li>Enterprise Patterns</li>
+                                    <li>Multi-Tier Patterns<br><br></li>
+                                    <li>Repository Pattern</li>
+                                    <li>Unit-of-Work Pattern</li>
+                                    <li>Active Record Pattern</li>
+                                    <li>CQRS Pattern<br><br></li>
+                                    <li>Model View Controller</li>
+                                    <li>Model View Presenter</li>
+                                    <li>Model View ViewModel<br><br></li>
+                                    <li>Spark<sup>TM</sup> RAD Platform</li>
+                                    <li>Art Shop MVC application</li>
+                                    <li>More...</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <br>
+                <div style="text-align:left; padding: 0 0 0 40px;">
+                    <a href="http://www.dofactory.com/products/net-design-pattern-framework">
+                        <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/spokespersondotnethalf.png" width="140" height="140" alt="Upgrade your .NET Design Pattern Skills" class="img-border">
+                    </a><br>
+                    <span style="color:brown">Get started today!</span>
+                    <br>
+                </div>
+
+                <br><br>
+                <a href="http://www.dofactory.com/products/net-design-pattern-framework" style="background-color:#FF4500;color:#ffffff;padding:8px;">Click here for details</a>
+                <br><br>
+
+                <b>
+                    -- Instant Access --<br>
+                    Instant Download
+                </b><br><br>
+
+
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+
+                        </div>
+                    </div>
+                    <div class="visible-xs" style="margin-top:0;">
+                        <div class="ctr">
+                            <div style="margin-left:10px; border-left:0px solid #bbb;">
+
+    <table style="width:210px;">
+        <tbody><tr>
+            <td style="text-align:center;">
+                <br><br>
+
+
+                <div style="margin:0 0 0 45px; text-align:left;">
+                    <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/circular_arrow.png" style="vertical-align:middle;" alt="">&nbsp;&nbsp;&nbsp;Better Code&nbsp;<br>
+                    <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/circular_arrow.png" style="vertical-align:middle;" alt="">&nbsp;&nbsp;&nbsp;Better Career&nbsp;<br>
+                    <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/circular_arrow.png" style="vertical-align:middle;" alt="">&nbsp;&nbsp;&nbsp;Better Lifestyle&nbsp;<br>
+                </div>
+
+                <br><br>
+
+
+                <a href="http://www.dofactory.com/products/net-design-pattern-framework" class="alwaysonb" style="color:#666;font-size:14pt;line-height:22pt; font-weight:bold;">
+                    .NET<br>Design Pattern<br>Framework 4.5
+                </a>
+
+                <br><br>
+                <a href="http://www.dofactory.com/products/net-design-pattern-framework">
+                    <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/dotnet_cs_4.5_box1 190x277 cropped noshade.png" width="170" alt=".NET Design Pattern Framework 4.5" style="margin-left:10px;padding-top:4px;">
+                </a>
+                <br>
+                <a href="http://www.dofactory.com/products/net-design-pattern-framework" class="alwaysonb" style="color:#666;font-size:16px;"><b>C# and VB</b></a>
+                <br><br>
+
+                <table>
+                    <tbody><tr>
+                        <td>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="background:#ffffff;color:#666; font-weight:bold;">Includes:</span><br><br>
+                            <div style="text-align:left; padding: 0 0 0 10px;">
+                                <ul>
+                                    <li>Gang of Four Patterns</li>
+                                    <li>Head First Patterns</li>
+                                    <li>Enterprise Patterns</li>
+                                    <li>Multi-Tier Patterns<br><br></li>
+                                    <li>Repository Pattern</li>
+                                    <li>Unit-of-Work Pattern</li>
+                                    <li>Active Record Pattern</li>
+                                    <li>CQRS Pattern<br><br></li>
+                                    <li>Model View Controller</li>
+                                    <li>Model View Presenter</li>
+                                    <li>Model View ViewModel<br><br></li>
+                                    <li>Spark<sup>TM</sup> RAD Platform</li>
+                                    <li>Art Shop MVC application</li>
+                                    <li>More...</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <br>
+                <div style="text-align:left; padding: 0 0 0 40px;">
+                    <a href="http://www.dofactory.com/products/net-design-pattern-framework">
+                        <img src="./C# Coding Standards and Naming Conventions - dofactory.com_files/spokespersondotnethalf.png" width="140" height="140" alt="Upgrade your .NET Design Pattern Skills" class="img-border">
+                    </a><br>
+                    <span style="color:brown">Get started today!</span>
+                    <br>
+                </div>
+
+                <br><br>
+                <a href="http://www.dofactory.com/products/net-design-pattern-framework" style="background-color:#FF4500;color:#ffffff;padding:8px;">Click here for details</a>
+                <br><br>
+
+                <b>
+                    -- Instant Access --<br>
+                    Instant Download
+                </b><br><br>
+
+
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br>
+
+
+
+    
+    <a id="scrollLeft" href="http://www.dofactory.com/reference/csharp-coding-standards#" class="scrollToTop" style="left: 30px; display: none;"><i class="fa fa-arrow-up"></i></a>
+    <a id="scrollRight" href="http://www.dofactory.com/reference/csharp-coding-standards#" class="scrollToTop" style="right: 30px; display: none;"><i class="fa fa-arrow-up"></i></a>
+
+    <div class="footer-bar">
+    <div class="container">
+        <div class="row" style="padding-top: 40px;">
+            <div class="col-sm-2 col-xs-12">
+                <div style="padding-left: 20px; color: #fff; font-weight:bold;">Company</div>
+                <ul class="footer-list">
+                    <li><a href="http://www.dofactory.com/about">About Us</a></li>
+                    <li><a href="http://www.dofactory.com/story">Our Story</a></li>
+                    <li><a href="http://www.dofactory.com/services">Services</a></li>
+                    <li><a href="http://www.dofactory.com/training">Training</a></li>
+                    <li><a href="http://www.dofactory.com/contact">Contact Us</a></li>
+
+                    <li style="padding-top: 15px;"><a href="http://www.dofactory.com/privacy">Privacy</a></li>
+                    <li><a href="http://www.dofactory.com/terms">Terms</a></li>
+                    <li><a href="http://www.dofactory.com/licensing">Licensing</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-3 col-xs-12">
+                <div style="padding-left: 20px; color: #fff; font-weight:bold;">Customers</div>
+                <ul class="footer-list">
+                    <li><a href="http://www.dofactory.com/customers">Our Customers</a></li>
+                    <li><a href="http://www.dofactory.com/customers/stories">Customer Stories</a></li>
+                </ul>
+                <div style="padding: 15px 0 0 20px; color: #fff; font-weight:bold;">Community</div>
+                <ul class="footer-list">
+                    <li><a href="http://www.dofactory.com/topic/search.aspx">Questions</a></li>
+                    <li><a href="http://www.dofactory.com/topic/add.aspx">Ask Question</a></li>
+                    <li><a href="http://www.dofactory.com/topic/topics.aspx">Explore</a></li>
+                    <li><a href="http://www.dofactory.com/tag/tags.aspx">Tags</a></li>
+                    <li><a href="http://www.dofactory.com/user/users.aspx">Users</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-xs-12">
+                <div style="padding-left: 20px; color: #fff; font-weight:bold;">Reference Guides</div>
+                <ul class="footer-list">
+                    <li><a href="http://www.dofactory.com/net/design-patterns">.NET Design Patterns</a></li>
+                    <li><a href="http://www.dofactory.com/javascript/design-patterns">JavaScript Design Patterns</a></li>
+                    <li style="padding-top: 15px;"><a href="http://www.dofactory.com/tutorial/javascript">JavaScript Tutorial</a></li>
+                    <li><a href="http://www.dofactory.com/sql/tutorial">SQL Tutorial</a></li>
+                    <li style="padding-top: 15px;"><a href="http://www.dofactory.com/reference/connection-strings">Connection Strings</a></li>
+                    <li><a href="http://www.dofactory.com/reference/visual-studio-shortcuts">Visual Studio Shortcuts</a></li>
+                    <li><a href="http://www.dofactory.com/reference/csharp-coding-standards">C# Coding Standards</a></li>
+                    <li><a href="http://www.dofactory.com/reference/html-color-codes">HTML Colors</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4 col-xs-12">
+                <div style="padding-left: 20px; color: #fff; font-weight:bold;">Our Products</div>
+                <div class="footer-products" style="margin-top: 10px; padding-bottom: 18px;">
+                    <ul class="footer-list">
+                        <li><a href="http://www.dofactory.com/products/net-design-pattern-framework">.NET Design Pattern Framework</a> <sup style="color: #999;">TM</sup></li>
+                        <li><a href="http://www.dofactory.com/products/pro-net-design-pattern-framework">PRO .NET Design Pattern Framework</a> <sup style="color: #999;">TM</sup></li>
+                        <li style="padding-top: 17px;"><a href="http://www.dofactory.com/products/javascript-jquery-design-pattern-framework">JavaScript + jQuery Pattern Framework</a> <sup style="color: #999;">TM</sup></li>
+                        <li><a href="http://www.dofactory.com/products/sql-database-design-pattern-framework">SQL + Database Pattern Framework</a> <sup style="color: #999;">TM</sup></li>
+
+                        <li style="padding-top: 17px;"><a href="http://www.dofactory.com/products">Products and Pricing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="footer-bar">
+    <div class="container">
+        <hr class="hr-darkbrown">
+        <div class="row" style="">
+            <div class="col-xs-12">
+                <div class="footer">© 2017 - Data &amp; Object Factory, LLC. &nbsp;dofactory.com. &nbsp;All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/jquery-2.1.1.js.download"></script>
+<script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/jquery.validate.js.download"></script>
+<script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/jquery.validate.unobtrusive.js.download"></script>
+
+    <script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/bootstrap.js.download"></script>
+<script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/twitter-bootstrap-hover-dropdown.min.js.download"></script>
+<script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/respond.js.download"></script>
+<script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/json2.js.download"></script>
+<script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/prettify.js.download"></script>
+<script src="./C# Coding Standards and Naming Conventions - dofactory.com_files/app.js.download"></script>
+
+
+    
+    <script type="text/javascript">
+        $(function () {
+            Dofactory.Utils.ScrollToTop.start();
+
+
+        });
+    </script>
+
+
+    <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-1223200-3', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+
+
+<div class="nav-collapse collapse" style="visibility: hidden; position: fixed;" id="cwspear-is-awesome">.</div></body></html>
