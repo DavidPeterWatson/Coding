@@ -74,8 +74,8 @@ Contents
     - [Dependency Inversion or Inversion of Control](#dependency-inversion-or-inversion-of-control)
 - [Other Principles/Techniques](#other-principlestechniques)
     - [DRY/ Principle of Abstraction](#dry-principle-of-abstraction)
-    - [&quot;Program to an &#39;interface&#39;, not an &#39;implementation&#39;.&quot;](#quotprogram-to-an-39interface39-not-an-39implementation39quot)
-    - [Composition over inheritance: &quot;Favour &#39;object composition&#39; over &#39;class inheritance&#39;.&quot;](#composition-over-inheritance-quotfavour-39object-composition39-over-39class-inheritance39quot)
+    - [&quot;Program to an 'interface', not an 'implementation'.&quot;](#quotprogram-to-an-interface-not-an-implementationquot)
+    - [Composition over inheritance: &quot;Favour 'object composition' over 'class inheritance'.&quot;](#composition-over-inheritance-quotfavour-object-composition-over-class-inheritancequot)
     - [Generics / Parameterised Types](#generics-parameterised-types)
     - [Pseudo code](#pseudo-code)
     - [Object Modelling](#object-modelling)
@@ -155,8 +155,10 @@ Contents
     - [Avoid magic numbers](#avoid-magic-numbers)
     - [Methods and classes for everything](#methods-and-classes-for-everything)
     - [Comment and comment well](#comment-and-comment-well)
-    - [Don&#39;t reinvent the wheel](#don39t-reinvent-the-wheel)
+    - [Don't reinvent the wheel](#dont-reinvent-the-wheel)
 - [Uncategorised](#uncategorised)
+    - [CQRS](#cqrs)
+    - [Event Sourcing](#event-sourcing)
     - [Law of Demetor](#law-of-demetor)
     - [High Cohesion](#high-cohesion)
     - [Loose Coupling](#loose-coupling)
@@ -220,11 +222,13 @@ Contents
         - [[http://www.oodesign.com/](http://www.oodesign.com/)](#httpwwwoodesigncomhttpwwwoodesigncom)
         - [[https://en.wikipedia.org/wiki/Software\_design\_pattern](https://en.wikipedia.org/wiki/Software_design_pattern)](#httpsenwikipediaorgwikisoftwaredesignpatternhttpsenwikipediaorgwikisoftwaredesignpattern)
         - [[https://en.wikipedia.org/wiki/Architectural\_pattern](https://en.wikipedia.org/wiki/Architectural_pattern)](#httpsenwikipediaorgwikiarchitecturalpatternhttpsenwikipediaorgwikiarchitecturalpattern)
-- [19.Books](#19books)
+- [Books](#books)
         - [[https://en.wikipedia.org/wiki/The\_Pragmatic\_Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)](#httpsenwikipediaorgwikithepragmaticprogrammerhttpsenwikipediaorgwikithepragmaticprogrammer)
         - [[https://en.wikipedia.org/wiki/Design\_Patterns](https://en.wikipedia.org/wiki/Design_Patterns) by Gang of Four](#httpsenwikipediaorgwikidesignpatternshttpsenwikipediaorgwikidesignpatterns-by-gang-of-four)
         - [[https://en.wikipedia.org/wiki/Code\_Complete](https://en.wikipedia.org/wiki/Code_Complete)](#httpsenwikipediaorgwikicodecompletehttpsenwikipediaorgwikicodecomplete)
         - [[https://martinfowler.com/books/eaa.html](https://martinfowler.com/books/eaa.html) by Martin Fowler](#httpsmartinfowlercombookseaahtmlhttpsmartinfowlercombookseaahtml-by-martin-fowler)
+- [Courses](#courses)
+    - [[Source Code Warrior](https://new-www.securecodewarrior.com/developer/)](#source-code-warriorhttpsnew-wwwsecurecodewarriorcomdeveloper)
 
 
 
@@ -345,9 +349,9 @@ Cons:
 
 ### Shadow
 
-Version B receives real-world traffic alongside version A and doesn&#39;t impact the response.
+Version B receives real-world traffic alongside version A and doesn't impact the response.
 
-A shadow deployment consists of releasing version B alongside version A, fork version A&#39;s incoming requests and send them to version B as well without impacting production traffic. This is particularly useful to test production load on a new feature. A rollout of the application is triggered when stability and performance meet the requirements.
+A shadow deployment consists of releasing version B alongside version A, fork version A's incoming requests and send them to version B as well without impacting production traffic. This is particularly useful to test production load on a new feature. A rollout of the application is triggered when stability and performance meet the requirements.
 
 This technique is fairly complex to setup and needs special requirements, especially with egress traffic. For example, given a shopping cart platform, if you want to shadow test the payment service you can end-up having customers paying twice for their order. In this case, you can solve it by creating a mocking service that replicates the response from the provider.
 
@@ -383,7 +387,7 @@ What to do with legacy QA? [https://www.infoworld.com/article/3238085/devops/leg
 
 Advocates frequent &quot;releases&quot; in short development cycles, which is intended to improve productivity and introduce checkpoints at which new customer requirements can be adopted.
 
-Other elements of extreme programming include: programming in pairs or doing extensive code review, unit testing of all code, avoiding programming of features until they are actually needed, a flat management structure, code simplicity and clarity, expecting changes in the customer&#39;s requirements as time passes and the problem is better understood, and frequent communication with the customer and among programmers.[2][3][4] The methodology takes its name from the idea that the beneficial elements of traditional software engineering practices are taken to &quot;extreme&quot; levels. As an example, code reviews are considered a beneficial practice; taken to the extreme, code can be reviewed continuously, i.e. the practice of pair programming.
+Other elements of extreme programming include: programming in pairs or doing extensive code review, unit testing of all code, avoiding programming of features until they are actually needed, a flat management structure, code simplicity and clarity, expecting changes in the customer's requirements as time passes and the problem is better understood, and frequent communication with the customer and among programmers.[2][3][4] The methodology takes its name from the idea that the beneficial elements of traditional software engineering practices are taken to &quot;extreme&quot; levels. As an example, code reviews are considered a beneficial practice; taken to the extreme, code can be reviewed continuously, i.e. the practice of pair programming.
 
 ### Lean
 
@@ -425,19 +429,19 @@ Delaying decisions as much as possible until they can be made based on facts and
 
 #### Deliver as fast as possible
 
-In the era of rapid technology evolution, it is not the biggest that survives, but the fastest. The sooner the end product is delivered without major defects, the sooner feedback can be received, and incorporated into the next iteration. The shorter the iterations, the better the learning and communication within the team. With speed, decisions can be delayed. Speed assures the fulfilling of the customer&#39;s present needs and not what they required yesterday. This gives them the opportunity to delay making up their minds about what they really require until they gain better knowledge. Customers value rapid delivery of a quality product.
+In the era of rapid technology evolution, it is not the biggest that survives, but the fastest. The sooner the end product is delivered without major defects, the sooner feedback can be received, and incorporated into the next iteration. The shorter the iterations, the better the learning and communication within the team. With speed, decisions can be delayed. Speed assures the fulfilling of the customer's present needs and not what they required yesterday. This gives them the opportunity to delay making up their minds about what they really require until they gain better knowledge. Customers value rapid delivery of a quality product.
 
 #### Empower the team
 
 There has been a traditional belief in most businesses about the decision-making in the organization – the managers tell the workers how to do their own job. In a &quot;Work-Out technique&quot;, the roles are turned – the managers are taught how to listen to the developers, so they can explain better what actions might be taken, as well as provide suggestions for improvements. The lean approach follows the Agile Principle[7] &quot;find good people and let them do their own job,&quot;[8] encouraging progress, catching errors, and removing impediments, but not micro-managing.
 
-Another mistaken belief has been the consideration of people as resources. People might be resources from the point of view of a statistical data sheet, but in software development, as well as any organizational business, people do need something more than just the list of tasks and the assurance that they will not be disturbed during the completion of the tasks. People need motivation and a higher purpose to work for – purpose within the reachable reality, with the assurance that the team might choose its own commitments. The developers should be given access to the customer; the team leader should provide support and help in difficult situations, as well as ensure that scepticism does not ruin the team&#39;s spirit.
+Another mistaken belief has been the consideration of people as resources. People might be resources from the point of view of a statistical data sheet, but in software development, as well as any organizational business, people do need something more than just the list of tasks and the assurance that they will not be disturbed during the completion of the tasks. People need motivation and a higher purpose to work for – purpose within the reachable reality, with the assurance that the team might choose its own commitments. The developers should be given access to the customer; the team leader should provide support and help in difficult situations, as well as ensure that scepticism does not ruin the team's spirit.
 
 #### Build integrity in
 
 The customer needs to have an overall experience of the System. This is the so-called perceived integrity: how it is being advertised, delivered, deployed, accessed, how intuitive its use is, its price and how well it solves problems.
 
-Conceptual integrity means that the system&#39;s separate components work well together as a whole with balance between flexibility, maintainability, efficiency, and responsiveness. This could be achieved by understanding the problem domain and solving it at the same time, not sequentially. The needed information is received in small batch pieces – not in one vast chunk - preferably by face-to-face communication and not any written documentation. The information flow should be constant in both directions – from customer to developers and back, thus avoiding the large stressful amount of information after long development in isolation.
+Conceptual integrity means that the system's separate components work well together as a whole with balance between flexibility, maintainability, efficiency, and responsiveness. This could be achieved by understanding the problem domain and solving it at the same time, not sequentially. The needed information is received in small batch pieces – not in one vast chunk - preferably by face-to-face communication and not any written documentation. The information flow should be constant in both directions – from customer to developers and back, thus avoiding the large stressful amount of information after long development in isolation.
 
 #### See the whole
 
@@ -464,7 +468,7 @@ Old school big design up front.
 
 ### Cowboy
 
-Where programmers have autonomy over the development process. This includes control of the project&#39;s schedule, languages, algorithms, tools, frameworks and coding style.
+Where programmers have autonomy over the development process. This includes control of the project's schedule, languages, algorithms, tools, frameworks and coding style.
 
 A cowboy coder can be a lone developer or part of a group of developers working with minimal process or discipline.
 
@@ -476,7 +480,7 @@ Basic dictum that aims to reduce duplication of information in a program.
 
 ### Big Design Up Front
 
-The program&#39;s design is to be completed and perfected before that program&#39;s implementation is started. It is often associated with the waterfall model of software development.
+The program's design is to be completed and perfected before that program's implementation is started. It is often associated with the waterfall model of software development.
 
 ### Continuous Integration
 
@@ -522,7 +526,7 @@ Error Detection ~ Discovering logical or transitional errors.
 
 Vulnerability Exposure ~ Identifying and averting common vulnerabilities like Cross-Site Scripting [XSS], Injection, Buffer Overflow, Excessive Disclosure, etc. Although many controls are inapplicable and can be ignored, a STIG [e.g., Application Security STIG 4.3] provides an excellent vulnerability checklist.
 
-Malware Discovery ~ This often-overlooked, and very special code-review objective looks for segments of code that appear extraneous, questionable, or flat-out weird. The intent is to discover back doors, Trojans, and time bombs. I say often-overlooked because the very idea of malware and malicious intent may ring overly dramatic to some developers. However - particularly in today&#39;s peril-ridden world - malevolent code is a very real threat and should not be overlooked… especially by USG agencies and departments like the DoD.
+Malware Discovery ~ This often-overlooked, and very special code-review objective looks for segments of code that appear extraneous, questionable, or flat-out weird. The intent is to discover back doors, Trojans, and time bombs. I say often-overlooked because the very idea of malware and malicious intent may ring overly dramatic to some developers. However - particularly in today's peril-ridden world - malevolent code is a very real threat and should not be overlooked… especially by USG agencies and departments like the DoD.
 
 Of the four objectives, malware is the only one that requires human detection. A program containing an obvious back door can be scanned using a tool like Fortify and come out looking as clean as the driven snow.
 
@@ -600,7 +604,7 @@ Let q(x) be a property provable about objects of x of type T. Then q(y) should b
 
 ## Interface Segregation
 
-A client should never be forced to implement an interface that it doesn&#39;t use, or clients shouldn&#39;t be forced to depend on methods they do not use.
+A client should never be forced to implement an interface that it doesn't use, or clients shouldn't be forced to depend on methods they do not use.
 
 ## Dependency Inversion or Inversion of Control
 
@@ -616,8 +620,8 @@ Do not repeat yourself
 
 Code Reuse, Loose Coupling
 
-## &quot;Program to an &#39;interface&#39;, not an &#39;implementation&#39;.&quot;
-## Composition over inheritance: &quot;Favour &#39;object composition&#39; over &#39;class inheritance&#39;.&quot;
+## &quot;Program to an 'interface', not an 'implementation'.&quot;
+## Composition over inheritance: &quot;Favour 'object composition' over 'class inheritance'.&quot;
 ## Generics / Parameterised Types
 ## Pseudo code
 ## Object Modelling
@@ -675,7 +679,7 @@ Used in System.Threading.ThreadPool and ConnectionPool
 
 ## Prototype (GoF)
 
-Specify the kinds of objects to create using a prototypical instance, and create new objects from the &#39;skeleton&#39; of an existing object, thus boosting performance and keeping memory footprints to a minimum.
+Specify the kinds of objects to create using a prototypical instance, and create new objects from the 'skeleton' of an existing object, thus boosting performance and keeping memory footprints to a minimum.
 
 ## Singleton (GoF)
 
@@ -864,7 +868,7 @@ Define an object that encapsulates how a set of objects interact. Mediator promo
 
 ## ? Memento
 
-Without violating encapsulation, capture and externalize an object&#39;s internal state allowing the object to be restored to this state later.
+Without violating encapsulation, capture and externalize an object's internal state allowing the object to be restored to this state later.
 
 ## ? Null Object
 
@@ -894,7 +898,7 @@ The Strategy Design Pattern allows an object to have some or all of its behavior
 
 ## Template Method
 
-Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm&#39;s structure.
+Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 
 ## ? Visitor
 
@@ -932,7 +936,7 @@ Decentralized way to store data and agree on ways of processing it in a Merkle t
 
 ## ? Double-checked locking
 
-Reduce the overhead of acquiring a lock by first testing the locking criterion (the &#39;lock hint&#39;) in an unsafe manner; only if that succeeds does the actual locking logic proceed.
+Reduce the overhead of acquiring a lock by first testing the locking criterion (the 'lock hint') in an unsafe manner; only if that succeeds does the actual locking logic proceed.
 
 ## ? Event-based asynchronous
 
@@ -986,7 +990,7 @@ Used in software development to encapsulate the processes involved in obtaining 
 
 ## Bikeshedding
 
-bikeshed +‎ -ing. The term was coined as a metaphor to illuminate Parkinson&#39;s Law of Triviality. Parkinson observed that a committee whose job is to approve plans for a nuclear power plant may spend the majority of its time on relatively unimportant but easy-to-grasp issues, such as what materials to use for the staff bikeshed, while neglecting the design of the power plant itself, which is far more important but also far more difficult to criticize constructively. It was popularized in the Berkeley Software Distribution community by Poul-Henning Kamp[1] and has spread from there to the software industry at large.
+bikeshed +‎ -ing. The term was coined as a metaphor to illuminate Parkinson's Law of Triviality. Parkinson observed that a committee whose job is to approve plans for a nuclear power plant may spend the majority of its time on relatively unimportant but easy-to-grasp issues, such as what materials to use for the staff bikeshed, while neglecting the design of the power plant itself, which is far more important but also far more difficult to criticize constructively. It was popularized in the Berkeley Software Distribution community by Poul-Henning Kamp[1] and has spread from there to the software industry at large.
 
 Futile investment of time and energy in discussion of marginal technical issues.
 
@@ -1029,7 +1033,7 @@ The main thing to remember about mocks versus stubs is that mocks are just like 
 
 ## Stubbing
 
-Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what&#39;s programmed in for the test. Stubs may also record information about calls, such as an email gateway stub that remembers the messages it &#39;sent&#39;, or maybe only how many messages it &#39;sent&#39;
+Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test. Stubs may also record information about calls, such as an email gateway stub that remembers the messages it 'sent', or maybe only how many messages it 'sent'
 
 Stub : This implementation is configured to respond to calls from the SUT with the values (or exceptions) that will exercise the Untested Code (see Production Bugs on page X) within the SUT. A key indication for using a Test Stub is having Untested Code caused by the inability to control the indirect inputs of the SUT
 
@@ -1042,15 +1046,13 @@ PascalCase for classes and methods
 
 camelCase for parameters
 
-\_underscore for private variables?
-
-?
+_underscore for private variables
 
 ## Use smart variables
 
 Using smart variables is very important if you want to make your code even slightly decipherable after a time away.
 
-The obvious tip is to name the variables based on what they do. So, maybe don&#39;t call the user name string MonkeyWrench –  call it UserName.
+The obvious tip is to name the variables based on what they do. So, maybe don't call the user name string MonkeyWrench –  call it UserName.
 
 Where possible, try to make your code read in a manner similar to English. This is something that becomes especially apparent when using Booleans (true or false statements).
 
@@ -1060,13 +1062,13 @@ Of course, you should also be equally logical when choosing names for methods an
 
 In some ways, magic numbers are more of a problem than randomly named variables. These are numbers that you assign special meaning to that are completely arbitrary.
 
-For example, I created an &#39;overshoot&#39; animation from scratch so that a view would slide in from the edge of the screen, overshoot its end destination, and then appear to &#39;ping&#39; back into the correct place.
+For example, I created an 'overshoot' animation from scratch so that a view would slide in from the edge of the screen, overshoot its end destination, and then appear to 'ping' back into the correct place.
 
-We know that &#39;0&#39; is left and &#39;1&#39; is right. But does everyone else?
+We know that '0' is left and '1' is right. But does everyone else?
 
-To do this, I allowed the image to overshoot its mark by 30 pixels before pinging back. The question you should ask at this point is &#39;why 30&#39;?
+To do this, I allowed the image to overshoot its mark by 30 pixels before pinging back. The question you should ask at this point is 'why 30'?
 
-A more common example of this might be the old &#39;Facing&#39; variable in a basic 2D game. The player can face left or right and in many cases, we will assign one of these directions to &#39;0&#39; and one of these directions to &#39;1&#39;. We know that &#39;0&#39; is left and &#39;1&#39; is right. But does everyone else? Will we still know that in one month, or one year?
+A more common example of this might be the old 'Facing' variable in a basic 2D game. The player can face left or right and in many cases, we will assign one of these directions to '0' and one of these directions to '1'. We know that '0' is left and '1' is right. But does everyone else? Will we still know that in one month, or one year?
 
 What should you do instead? Well, you could create constants. For instance:
 
@@ -1076,33 +1078,37 @@ private static final int right = 1;
 
 Now you can say if (Facing = left) and that is hugely more readable.
 
-Likewise, instead of pinging back at &#39;30&#39; we could ping back at overshootAmount or something similar. This also has the added bonus of allowing us to easily tweak how exaggerated our animations are. We could even make this an option available for the user to change.
+Likewise, instead of pinging back at '30' we could ping back at overshootAmount or something similar. This also has the added bonus of allowing us to easily tweak how exaggerated our animations are. We could even make this an option available for the user to change.
 
 ## Methods and classes for everything
 
 Create methods and classes wherever possible to break up your code. If you then give those methods logical, readable names, then your code will end up short and easy to follow with the option to dig into the nuts and bolts of each step only as necessary: if this, get this number, then draw picture on screen, then save this file…
 
-If you follow this line of logic, larger methods will be broken down into multiple smaller methods. This not only keeps everything nicely organized on the screen allowing you to handle it in digestible chunks; it also makes them more portable for using in future projects. Just grab a method and drop it into your next program and you&#39;ve saved yourself a ton of time.
+If you follow this line of logic, larger methods will be broken down into multiple smaller methods. This not only keeps everything nicely organized on the screen allowing you to handle it in digestible chunks; it also makes them more portable for using in future projects. Just grab a method and drop it into your next program and you've saved yourself a ton of time.
 
 ## Comment and comment well
 
-Not only should you comment your code but you should also keep in mind a tip someone taught me: don&#39;t just write what a section of code does, write why it is important. This helps to contextualize the code and presents the bigger picture of how this method or line fits into the grand scheme of things.
+Not only should you comment your code but you should also keep in mind a tip someone taught me: don't just write what a section of code does, write why it is important. This helps to contextualize the code and presents the bigger picture of how this method or line fits into the grand scheme of things.
 
-You can also use comments for a variety of other purposes. One trick I like is to use a kind of &#39;keyword&#39; for code that needs looking at later, or code that I&#39;m about to jump back to. If I need to quickly jump into another part of the code for reference, then using this keyword I can then perform a search to get back to where I just was. Likewise, if I earmark lines that need polish in this way, I can quickly sift through the page to find things that need brushing up.
+You can also use comments for a variety of other purposes. One trick I like is to use a kind of 'keyword' for code that needs looking at later, or code that I'm about to jump back to. If I need to quickly jump into another part of the code for reference, then using this keyword I can then perform a search to get back to where I just was. Likewise, if I earmark lines that need polish in this way, I can quickly sift through the page to find things that need brushing up.
 
 avoid the temptation to simply comment out the code you no longer want
 
-One last pointer: avoid the temptation to simply comment out the code you no longer want. This can be tempting as it allows you to save said code for later in case you need it, but it can hurt readability and make a project harder to navigate. If you&#39;re anxious to delete old code, keep it in a notepad document or something instead.
+One last pointer: avoid the temptation to simply comment out the code you no longer want. This can be tempting as it allows you to save said code for later in case you need it, but it can hurt readability and make a project harder to navigate. If you're anxious to delete old code, keep it in a notepad document or something instead.
 
-## Don&#39;t reinvent the wheel
+## Don't reinvent the wheel
 
-The great thing about programming is that a lot of it is done for you. There are so many libraries, classes and example snippets of code that you&#39;re free to use, that with some smart Googling you can pretty much build your app out of ready-made parts.
+The great thing about programming is that a lot of it is done for you. There are so many libraries, classes and example snippets of code that you're free to use, that with some smart Googling you can pretty much build your app out of ready-made parts.
 
-This saves a lot of time when building something complex. What&#39;s more, is that if you&#39;re liberating a piece of open source code from Github, chances are it has been worked on by multiple people and fine tuned to perfection. In other words, it&#39;s probably better than the code you&#39;d make if you quickly tried to piece something together yourself. You might even learn some good habits by looking at it.
+This saves a lot of time when building something complex. What's more, is that if you're liberating a piece of open source code from Github, chances are it has been worked on by multiple people and fine tuned to perfection. In other words, it's probably better than the code you'd make if you quickly tried to piece something together yourself. You might even learn some good habits by looking at it.
 
-Of course, it&#39;s very important that you always give credit where it&#39;s due and only use code with a Creative Commons license.
+Of course, it's very important that you always give credit where it's due and only use code with a Creative Commons license.
 
 # Uncategorised
+
+## CQRS
+
+## Event Sourcing
 
 ## Law of Demetor
 
@@ -1110,7 +1116,7 @@ The Law of Demeter (LoD) or principle of least knowledge is a design guideline f
 
 Each unit should have only limited knowledge about other units: only units &quot;closely&quot; related to the current unit.
 
-Each unit should only talk to its friends; don&#39;t talk to strangers.
+Each unit should only talk to its friends; don't talk to strangers.
 
 Only talk to your immediate friends.
 
@@ -1119,6 +1125,7 @@ The fundamental notion is that a given object should assume as little as possibl
 It is so named for its origin in the Demeter Project, an adaptive programming and aspect-oriented programming effort. The project was named in honor of Demeter, &quot;distribution-mother&quot; and the Greek goddess of agriculture, to signify a bottom-up philosophy of programming which is also embodied in the law itself.
 
 ## High Cohesion
+
 ## Loose Coupling
 
 In  [software engineering](https://en.wikipedia.org/wiki/Software_engineering), coupling is the degree of interdependence between software modules; a measure of how closely connected two routines or modules are; the strength of the relationships between modules.
@@ -1130,7 +1137,7 @@ Method for constructing object oriented APIs, where the readability of the sourc
 
 ## Encapsulation
 
-Refers to the bundling of data with the methods that operate on that data. [5] Encapsulation is used to hide the values or state of a structured data object inside a class, preventing unauthorized parties&#39; direct access to them.
+Refers to the bundling of data with the methods that operate on that data. [5] Encapsulation is used to hide the values or state of a structured data object inside a class, preventing unauthorized parties' direct access to them.
 
 ## Session
 
@@ -1260,7 +1267,7 @@ Refers to the bundling of data with the methods that operate on that data. [5] E
 
 [http://geeklearning.io/a-different-approach-to-test-your-asp-net-core-application/](http://geeklearning.io/a-different-approach-to-test-your-asp-net-core-application/)
 
-# 19.Books
+# Books
 
 ### [https://en.wikipedia.org/wiki/The\_Pragmatic\_Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)
 
@@ -1277,6 +1284,11 @@ Refers to the bundling of data with the methods that operate on that data. [5] E
 Other reading
 
 [https://en.wikipedia.org/wiki/The\_Mythical\_Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)
+
+
+# Courses
+
+## [Source Code Warrior](https://new-www.securecodewarrior.com/developer/)
 
 
 Story Criteria
