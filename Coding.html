@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Coding</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/david/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.3.1/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="coding">Coding</h1>
+
+<p>Contents</p>
+<ul>
+<li><a href="#coding">Coding</a>
+<ul>
+<li><a href="#programming-paradigms">Programming Paradigms</a>
+<ul>
+<li><a href="#object-oriented">Object Oriented</a></li>
+<li><a href="#functional">Functional</a></li>
+<li><a href="#declarative">Declarative</a></li>
+<li><a href="#aspect-oriented">Aspect-oriented</a></li>
+</ul>
+</li>
+<li><a href="#development-methodologies">Development Methodologies</a>
+<ul>
+<li><a href="#devops">DevOps</a></li>
+<li><a href="#agile">Agile</a></li>
+<li><a href="#extreme">Extreme</a></li>
+<li><a href="#lean">Lean</a>
+<ul>
+<li><a href="#eliminate-waste">Eliminate waste</a></li>
+<li><a href="#amplify-learning">Amplify learning</a></li>
+<li><a href="#decide-as-late-as-possible">Decide as late as possible</a></li>
+<li><a href="#deliver-as-fast-as-possible">Deliver as fast as possible</a></li>
+<li><a href="#empower-the-team">Empower the team</a></li>
+<li><a href="#build-integrity-in">Build integrity in</a></li>
+<li><a href="#see-the-whole">See the whole</a></li>
+</ul>
+</li>
+<li><a href="#kaizen">Kaizen</a></li>
+<li><a href="#test-driven-development">Test-driven Development</a></li>
+<li><a href="#continuous-test-driven-development">Continuous Test-driven Development</a></li>
+<li><a href="#behaviour-driven-development">Behaviour-driven development</a></li>
+<li><a href="#waterfall">Waterfall</a></li>
+<li><a href="#cowboy">Cowboy</a></li>
+<li><a href="#abstraction-principle">Abstraction Principle</a></li>
+<li><a href="#big-design-up-front">Big Design Up Front</a></li>
+<li><a href="#continuous-integration">Continuous Integration</a></li>
+<li><a href="#model-driven-architecture">Model Driven Architecture</a></li>
+<li><a href="#open-source">Open Source</a></li>
+<li><a href="#separation-of-concern-encapsulation-modular">Separation of Concern. Encapsulation, Modular</a></li>
+<li><a href="#separation-of-content-and-presentation">Separation of content and presentation</a></li>
+</ul>
+</li>
+<li><a href="#development-conceptstechniques">Development Concepts/Techniques</a>
+<ul>
+<li><a href="#code-generation">Code Generation</a></li>
+<li><a href="#pairing">Pairing</a></li>
+<li><a href="#code-review">Code Review</a></li>
+<li><a href="#static-code-analysis">Static Code Analysis</a></li>
+<li><a href="#source-code-repo">Source Code Repo</a></li>
+<li><a href="#freedom-and-responsibility">Freedom and Responsibility</a></li>
+<li><a href="#devopsdays">DevOpsDays</a></li>
+<li><a href="#state-vs-migrations-based-deployments">State vs Migrations-based deployments</a></li>
+</ul>
+</li>
+<li><a href="#deployment-strategies">Deployment Strategies</a>
+<ul>
+<li><a href="#recreate">Recreate</a></li>
+<li><a href="#ramped-also-known-as-rolling-update-or-incremental">Ramped (also known as rolling-update or incremental)</a></li>
+<li><a href="#bluegreen">Blue/Green</a></li>
+<li><a href="#canary">Canary</a></li>
+<li><a href="#ab-testing">A/B testing</a></li>
+<li><a href="#shadow">Shadow</a></li>
+</ul>
+</li>
+<li><a href="#architectural-patterns">Architectural Patterns</a>
+<ul>
+<li><a href="#blackboard-system">Blackboard System</a></li>
+<li><a href="#broker-pattern">Broker Pattern</a></li>
+<li><a href="#event-driven-architecture">Event-driven architecture</a></li>
+<li><a href="#implicit-invocation">Implicit invocation</a></li>
+<li><a href="#microservices">Microservices</a></li>
+<li><a href="#layers">Layers</a>
+<ul>
+<li><a href="#domain-layer">Domain Layer</a></li>
+<li><a href="#application-layer">Application Layer</a></li>
+<li><a href="#distributed-service-layer">Distributed Service Layer</a></li>
+<li><a href="#presentation-layer">Presentation Layer</a></li>
+<li><a href="#infrastructure-layer">Infrastructure Layer</a></li>
+</ul>
+</li>
+<li><a href="#model-view-whatever">Model-View-Whatever</a></li>
+<li><a href="#entity-component-system">Entity Component System</a></li>
+<li><a href="#multitier-architecture">Multitier Architecture</a></li>
+<li><a href="#naked-objects">Naked Objects</a></li>
+<li><a href="#operational-data-store">Operational Data Store</a></li>
+<li><a href="#peer-to-peer">Peer-to-Peer</a></li>
+<li><a href="#pipe-and-filter-architecture">Pipe and Filter Architecture</a></li>
+<li><a href="#service-oriented-architecture">Service Oriented Architecture</a></li>
+<li><a href="#space-based-architecture">Space Based Architecture</a></li>
+<li><a href="#model-driven-architecture">Model-Driven Architecture</a></li>
+</ul>
+</li>
+<li><a href="#solid-design-principles">Solid Design Principles</a>
+<ul>
+<li><a href="#single-responsibility">Single Responsibility</a></li>
+<li><a href="#open-closed">Open Closed</a></li>
+<li><a href="#liskov-substitution">Liskov Substitution</a></li>
+<li><a href="#interface-segregation">Interface Segregation</a></li>
+<li><a href="#dependency-inversion-or-inversion-of-control">Dependency Inversion or Inversion of Control</a></li>
+</ul>
+</li>
+<li><a href="#other-design-principlestechniques">Other Design Principles/Techniques</a>
+<ul>
+<li><a href="#law-of-demetor">Law of Demetor</a></li>
+<li><a href="#dry-principle-of-abstraction">DRY/ Principle of Abstraction</a></li>
+<li><a href="#program-to-an-interface-not-an-implementation">&quot;Program to an 'interface', not an 'implementation'.&quot;</a></li>
+<li><a href="#composition-over-inheritance-favour-object-composition-over-class-inheritance">Composition over inheritance: &quot;Favour 'object composition' over 'class inheritance'.&quot;</a></li>
+<li><a href="#generics-parameterised-types">Generics / Parameterised Types</a></li>
+<li><a href="#pseudo-code">Pseudo code</a></li>
+<li><a href="#object-modelling">Object Modelling</a></li>
+<li><a href="#extensibility">Extensibility</a></li>
+</ul>
+</li>
+<li><a href="#creational-design-patterns">Creational Design Patterns</a>
+<ul>
+<li><a href="#abstract-factory-gof">Abstract factory (GoF)</a></li>
+<li><a href="#builder-gof">Builder (GoF)</a></li>
+<li><a href="#dependency-injection-supports-dependency-inversion">Dependency Injection (supports Dependency Inversion)</a></li>
+<li><a href="#factory-method-gof">Factory Method (GoF)</a></li>
+<li><a href="#lazy-initialization">Lazy initialization</a></li>
+<li><a href="#multiton">Multiton</a></li>
+<li><a href="#object-pool">Object Pool</a></li>
+<li><a href="#prototype-gof">Prototype (GoF)</a></li>
+<li><a href="#singleton-gof">Singleton (GoF)</a></li>
+</ul>
+</li>
+<li><a href="#structural-design-patterns">Structural Design Patterns</a>
+<ul>
+<li><a href="#cqrs">CQRS</a></li>
+<li><a href="#adapter-wrapper-or-translator-gof">Adapter, Wrapper, or Translator (GoF)</a></li>
+<li><a href="#bridgehandlebody-gof">Bridge/Handle/Body (GoF)</a></li>
+<li><a href="#decorator-gof">? Decorator (GoF)</a></li>
+<li><a href="#extension-object">Extension Object</a></li>
+<li><a href="#fa%C3%A7ade-gof">? Façade (GoF)</a></li>
+<li><a href="#flyweight-gof">? Flyweight (GoF)</a></li>
+<li><a href="#front-controller">? Front controller</a></li>
+<li><a href="#marker">? Marker</a></li>
+<li><a href="#module">Module</a></li>
+<li><a href="#proxy">? Proxy</a></li>
+<li><a href="#twin">Twin</a></li>
+<li><a href="#composite-gof">Composite (GoF)</a></li>
+</ul>
+</li>
+<li><a href="#behavioural-design-patterns">Behavioural Design Patterns</a>
+<ul>
+<li><a href="#event-sourcing">Event Sourcing</a></li>
+<li><a href="#blackboard">? Blackboard</a></li>
+<li><a href="#chain-of-responsibility">Chain of Responsibility</a></li>
+<li><a href="#command">Command</a></li>
+<li><a href="#interpreter">? Interpreter</a></li>
+<li><a href="#iterator">Iterator</a></li>
+<li><a href="#mediator">? Mediator</a></li>
+<li><a href="#memento">? Memento</a></li>
+<li><a href="#null-object">? Null Object</a></li>
+<li><a href="#observerpublish-subscribe">Observer/Publish Subscribe</a></li>
+<li><a href="#servant">? Servant</a></li>
+<li><a href="#specification">? Specification</a></li>
+<li><a href="#state">? State</a></li>
+<li><a href="#strategy">Strategy</a></li>
+<li><a href="#template-method">Template Method</a></li>
+<li><a href="#visitor">? Visitor</a></li>
+<li><a href="#repository-pattern">Repository Pattern</a></li>
+<li><a href="#pluginmicrokernel">Plugin/Microkernel</a></li>
+</ul>
+</li>
+<li><a href="#concurrency-design-patterns">Concurrency Design Patterns</a>
+<ul>
+<li><a href="#active-object">? Active Object</a></li>
+<li><a href="#balking">? Balking</a></li>
+<li><a href="#binding-properties">Binding properties</a></li>
+<li><a href="#blockchain">? Blockchain</a></li>
+<li><a href="#double-checked-locking">? Double-checked locking</a></li>
+<li><a href="#event-based-asynchronous">? Event-based asynchronous</a></li>
+<li><a href="#guarded-suspension">? Guarded Suspension</a></li>
+<li><a href="#join">? Join</a></li>
+<li><a href="#lock">Lock</a></li>
+<li><a href="#messaging-design-pattern-mdp">? Messaging design pattern (MDP)</a></li>
+<li><a href="#monitor-object">? Monitor object</a></li>
+<li><a href="#reactor">? Reactor</a></li>
+<li><a href="#read-write-lock">? Read-write lock</a></li>
+<li><a href="#scheduler">? Scheduler</a></li>
+<li><a href="#thread-pool">.Thread Pool</a></li>
+<li><a href="#thread-specific-storage">Thread-Specific Storage</a></li>
+</ul>
+</li>
+<li><a href="#anti-patterns">Anti-Patterns</a>
+<ul>
+<li><a href="#service-locator-pattern">Service Locator Pattern</a></li>
+<li><a href="#bikeshedding">Bikeshedding</a></li>
+</ul>
+</li>
+<li><a href="#testing">Testing</a>
+<ul>
+<li><a href="#unit-testing">Unit Testing</a></li>
+<li><a href="#integration-testing">Integration Testing</a></li>
+<li><a href="#behaviour-testing">Behaviour Testing</a></li>
+<li><a href="#penetration-testing">Penetration testing</a></li>
+<li><a href="#faking">Faking</a></li>
+<li><a href="#mocking">Mocking</a></li>
+<li><a href="#stubbing">Stubbing</a></li>
+</ul>
+</li>
+<li><a href="#formatting">Formatting</a>
+<ul>
+<li><a href="#cases">Cases</a></li>
+<li><a href="#use-smart-variables">Use smart variables</a></li>
+<li><a href="#avoid-magic-numbers">Avoid magic numbers</a></li>
+<li><a href="#methods-and-classes-for-everything">Methods and classes for everything</a></li>
+<li><a href="#comment-and-comment-well">Comment and comment well</a></li>
+<li><a href="#dont-reinvent-the-wheel">Don't reinvent the wheel</a></li>
+</ul>
+</li>
+<li><a href="#uncategorised">Uncategorised</a>
+<ul>
+<li><a href="#high-cohesion">High Cohesion</a></li>
+<li><a href="#loose-coupling">Loose Coupling</a></li>
+<li><a href="#modular">Modular</a></li>
+<li><a href="#encapsulation">Encapsulation</a></li>
+<li><a href="#session">Session</a></li>
+<li><a href="#caching">Caching</a></li>
+<li><a href="#logging">Logging</a></li>
+<li><a href="#setting-management">Setting management</a></li>
+<li><a href="#timing">Timing</a></li>
+<li><a href="#object-to-object-mapping-auto-mapping">Object to Object Mapping (Auto Mapping)</a></li>
+</ul>
+</li>
+<li><a href="#left-out">Left Out</a>
+<ul>
+<li><a href="#resource-acquisition-is-initialization-raii">Resource acquisition is initialization (RAII)</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a>
+<ul>
+<li>[<a href="https://en.wikipedia.org/wiki/Abstract_factory_pattern">https://en.wikipedia.org/wiki/Abstract_factory_pattern</a>](#httpsenwikipediaorgwikiabstractfactorypatternhttpsenwikipediaorgwikiabstractfactorypattern)</li>
+<li>[<a href="http://www.oodesign.com/">http://www.oodesign.com/</a>](#httpwwwoodesigncomhttpwwwoodesigncom)</li>
+<li>[<a href="https://en.wikipedia.org/wiki/Software_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a>](#httpsenwikipediaorgwikisoftwaredesignpatternhttpsenwikipediaorgwikisoftwaredesignpattern)</li>
+<li>[<a href="https://en.wikipedia.org/wiki/Architectural_pattern">https://en.wikipedia.org/wiki/Architectural_pattern</a>](#httpsenwikipediaorgwikiarchitecturalpatternhttpsenwikipediaorgwikiarchitecturalpattern)</li>
+</ul>
+</li>
+<li><a href="#books">Books</a>
+<ul>
+<li>[<a href="https://en.wikipedia.org/wiki/The_Pragmatic_Programmer">https://en.wikipedia.org/wiki/The_Pragmatic_Programmer</a>](#httpsenwikipediaorgwikithepragmaticprogrammerhttpsenwikipediaorgwikithepragmaticprogrammer)</li>
+<li>[<a href="https://en.wikipedia.org/wiki/Design_Patterns">https://en.wikipedia.org/wiki/Design_Patterns</a> by Gang of Four](#httpsenwikipediaorgwikidesignpatternshttpsenwikipediaorgwikidesignpatterns-by-gang-of-four)</li>
+<li>[<a href="https://en.wikipedia.org/wiki/Code_Complete">https://en.wikipedia.org/wiki/Code_Complete</a>](#httpsenwikipediaorgwikicodecompletehttpsenwikipediaorgwikicodecomplete)</li>
+<li>[<a href="https://martinfowler.com/books/eaa.html">https://martinfowler.com/books/eaa.html</a> by Martin Fowler](#httpsmartinfowlercombookseaahtmlhttpsmartinfowlercombookseaahtml-by-martin-fowler)</li>
+</ul>
+</li>
+<li><a href="#courses">Courses</a>
+<ul>
+<li>[<a href="https://new-www.securecodewarrior.com/developer/">Source Code Warrior</a>](#source-code-warriorhttpsnew-wwwsecurecodewarriorcomdeveloper)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="programming-paradigms">Programming Paradigms</h2>
+
+<h3 class="mume-header" id="object-oriented">Object Oriented</h3>
+
+<h3 class="mume-header" id="functional">Functional</h3>
+
+<h3 class="mume-header" id="declarative">Declarative</h3>
+
+<h3 class="mume-header" id="aspect-oriented">Aspect-oriented</h3>
+
+<h2 class="mume-header" id="development-methodologies">Development Methodologies</h2>
+
+<h3 class="mume-header" id="devops">DevOps</h3>
+
+<p>Calms</p>
+<ol>
+<li>Culture</li>
+<li>Automation</li>
+<li>Lean</li>
+<li>Measurement</li>
+<li>Sharing</li>
+</ol>
+<p>What to do with legacy QA? <a href="https://www.infoworld.com/article/3238085/devops/legacy-qa-in-the-devops-age-reskill-them-or-release-them.html">https://www.infoworld.com/article/3238085/devops/legacy-qa-in-the-devops-age-reskill-them-or-release-them.html</a></p>
+<h3 class="mume-header" id="agile">Agile</h3>
+
+<p>Ceremonies ?</p>
+<p>User Stories</p>
+<p>Story Criteria<br>
+Our stories should be written using Bill Wake's INVEST criteria where possible. I say where possible, as I believe often in order to create smaller stories you need to violate the &quot;Independent&quot; rule, for example<br>
+&quot;User inputs information&quot;, needs to come before &quot;Information validated&quot;.<br>
+Independent: We want to be able to develop in any sequence.<br>
+Negotiable: Avoid too much detail; keep them flexible so the team can adjust how much of the story to implement.<br>
+Valuable: Users or customers get some value from the story.<br>
+Estimatable: The team must be able to use them for planning.<br>
+Small: Large stories are harder to estimate and plan. By the time of iteration planning, the story should be able to be designed, coded, and tested within the iteration.<br>
+Testable: Document acceptance criteria, or the definition of done for the story, which lead to test cases.</p>
+<p>Format:<br>
+<strong>As a</strong> <user type="">, <strong>I want</strong> <function> <strong>so that</strong> <reason></reason></function></user></p>
+<p>Example:<br>
+<strong>As a</strong> customer, <strong>I want</strong> to see an account list <strong>so that</strong> I know the accounts I have with the bank and a summary of their status.</p>
+<p>Using this format allows us to understand clearly why we are doing the work.</p>
+<p>Acceptance Criteria<br>
+Stories should have criteria that lets us understand when it will be accepted as complete. We probably won't have time in the inception to clearly define all of these, but can jot down notes. In the end, the<br>
+acceptance criteria should be written as follows:<br>
+Given <scenario><br>
+When <action performed=""><br>
+Then <result></result></action></scenario></p>
+<p>Example:<br>
+Given a user is viewing the account list<br>
+When they click on an account<br>
+Then account details are displayed</p>
+<p>These can be easily read by developers, BAs and testers, and test scenarios can be written using them as a starting point. Cucumber.</p>
+<p><a href="https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/">https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/</a></p>
+<h3 class="mume-header" id="extreme">Extreme</h3>
+
+<p>Advocates frequent &quot;releases&quot; in short development cycles, which is intended to improve productivity and introduce checkpoints at which new customer requirements can be adopted.</p>
+<p>Other elements of extreme programming include: programming in pairs or doing extensive code review, unit testing of all code, avoiding programming of features until they are actually needed, a flat management structure, code simplicity and clarity, expecting changes in the customer's requirements as time passes and the problem is better understood, and frequent communication with the customer and among programmers.[2][3][4] The methodology takes its name from the idea that the beneficial elements of traditional software engineering practices are taken to &quot;extreme&quot; levels. As an example, code reviews are considered a beneficial practice; taken to the extreme, code can be reviewed continuously, i.e. the practice of pair programming.</p>
+<h3 class="mume-header" id="lean">Lean</h3>
+
+<p>Lean development can be summarized by seven principles, very close in concept to lean manufacturing principles:</p>
+<h4 class="mume-header" id="eliminate-waste">Eliminate waste</h4>
+
+<p>The following are wastes:</p>
+<p>Building the wrong feature or product</p>
+<p>Mismanaging the backlog</p>
+<p>Rework</p>
+<p>Unnecessarily complex solutions</p>
+<p>Extraneous cognitive load</p>
+<p>Psychological distress</p>
+<p>Waiting/multitasking</p>
+<p>Knowledge loss</p>
+<p>Ineffective communication.</p>
+<h4 class="mume-header" id="amplify-learning">Amplify learning</h4>
+
+<p>Software development is a continuous learning process based on iterations when writing code. Software design is a problem solving process involving the developers writing the code and what they have learned. Software value is measured in fitness for use and not in conformance to requirements.</p>
+<p>Instead of adding more documentation or detailed planning, different ideas could be tried by writing code and building. The process of user requirements gathering could be simplified by presenting screens to the end-users and getting their input. The accumulation of defects should be prevented by running tests as soon as the code is written.</p>
+<p>The learning process is sped up by usage of short iteration cycles – each one coupled with refactoring and integration testing. Increasing feedback via short feedback sessions with customers helps when determining the current phase of development and adjusting efforts for future improvements. During those short sessions both customer representatives and the development team learn more about the domain problem and figure out possible solutions for further development. Thus the customers better understand their needs, based on the existing result of development efforts, and the developers learn how to better satisfy those needs. Another idea in the communication and learning process with a customer is set-based development – this concentrates on communicating the constraints of the future solution and not the possible solutions, thus promoting the birth of the solution via dialogue with the customer.</p>
+<h4 class="mume-header" id="decide-as-late-as-possible">Decide as late as possible</h4>
+
+<p>Delaying decisions as much as possible until they can be made based on facts and not on uncertain assumptions and predictions.</p>
+<h4 class="mume-header" id="deliver-as-fast-as-possible">Deliver as fast as possible</h4>
+
+<p>In the era of rapid technology evolution, it is not the biggest that survives, but the fastest. The sooner the end product is delivered without major defects, the sooner feedback can be received, and incorporated into the next iteration. The shorter the iterations, the better the learning and communication within the team. With speed, decisions can be delayed. Speed assures the fulfilling of the customer's present needs and not what they required yesterday. This gives them the opportunity to delay making up their minds about what they really require until they gain better knowledge. Customers value rapid delivery of a quality product.</p>
+<h4 class="mume-header" id="empower-the-team">Empower the team</h4>
+
+<p>There has been a traditional belief in most businesses about the decision-making in the organization – the managers tell the workers how to do their own job. In a &quot;Work-Out technique&quot;, the roles are turned – the managers are taught how to listen to the developers, so they can explain better what actions might be taken, as well as provide suggestions for improvements. The lean approach follows the Agile Principle[7] &quot;find good people and let them do their own job,&quot;[8] encouraging progress, catching errors, and removing impediments, but not micro-managing.</p>
+<p>Another mistaken belief has been the consideration of people as resources. People might be resources from the point of view of a statistical data sheet, but in software development, as well as any organizational business, people do need something more than just the list of tasks and the assurance that they will not be disturbed during the completion of the tasks. People need motivation and a higher purpose to work for – purpose within the reachable reality, with the assurance that the team might choose its own commitments. The developers should be given access to the customer; the team leader should provide support and help in difficult situations, as well as ensure that scepticism does not ruin the team's spirit.</p>
+<h4 class="mume-header" id="build-integrity-in">Build integrity in</h4>
+
+<p>The customer needs to have an overall experience of the System. This is the so-called perceived integrity: how it is being advertised, delivered, deployed, accessed, how intuitive its use is, its price and how well it solves problems.</p>
+<p>Conceptual integrity means that the system's separate components work well together as a whole with balance between flexibility, maintainability, efficiency, and responsiveness. This could be achieved by understanding the problem domain and solving it at the same time, not sequentially. The needed information is received in small batch pieces – not in one vast chunk - preferably by face-to-face communication and not any written documentation. The information flow should be constant in both directions – from customer to developers and back, thus avoiding the large stressful amount of information after long development in isolation.</p>
+<h4 class="mume-header" id="see-the-whole">See the whole</h4>
+
+<p>Software systems nowadays are not simply the sum of their parts, but also the product of their interactions. Defects in software tend to accumulate during the development process – by decomposing the big tasks into smaller tasks, and by standardizing different stages of development, the root causes of defects should be found and eliminated. The larger the system, the more organizations that are involved in its development and the more parts are developed by different teams, the greater the importance of having well defined relationships between different vendors, in order to produce a system with smoothly interacting components. During a longer period of development, a stronger subcontractor network is far more beneficial than short-term profit optimizing, which does not enable win-win relationships.</p>
+<p>Lean thinking has to be understood well by all members of a project, before implementing in a concrete, real-life situation. &quot;Think big, act small, fail fast; learn rapidly&quot;[9] – these slogans summarize the importance of understanding the field and the suitability of implementing lean principles along the whole software development process. Only when all of the lean principles are implemented together, combined with strong &quot;common sense&quot; with respect to the working environment, is there a basis for success in software development.</p>
+<h3 class="mume-header" id="kaizen">Kaizen</h3>
+
+<p>Japanese. Kaizen refers to activities that continuously improve all functions and involve all employees</p>
+<h3 class="mume-header" id="test-driven-development">Test-driven Development</h3>
+
+<p>Relies on the repetition of a very short development cycle: Requirements are turned into very specific test cases, then the software is improved to pass the new tests, only. This is opposed to software development that allows software to be added that is not proven to meet requirements.</p>
+<h3 class="mume-header" id="continuous-test-driven-development">Continuous Test-driven Development</h3>
+
+<p>Automated Test-driven Development. Feature available on GitHub and visual studio team services.</p>
+<h3 class="mume-header" id="behaviour-driven-development">Behaviour-driven development</h3>
+
+<h3 class="mume-header" id="waterfall">Waterfall</h3>
+
+<p>Old school big design up front.</p>
+<h3 class="mume-header" id="cowboy">Cowboy</h3>
+
+<p>Where programmers have autonomy over the development process. This includes control of the project's schedule, languages, algorithms, tools, frameworks and coding style.</p>
+<p>A cowboy coder can be a lone developer or part of a group of developers working with minimal process or discipline.</p>
+<p>Anti-pattern</p>
+<h3 class="mume-header" id="abstraction-principle">Abstraction Principle</h3>
+
+<p>Basic dictum that aims to reduce duplication of information in a program.</p>
+<h3 class="mume-header" id="big-design-up-front">Big Design Up Front</h3>
+
+<p>The program's design is to be completed and perfected before that program's implementation is started. It is often associated with the waterfall model of software development.</p>
+<h3 class="mume-header" id="continuous-integration">Continuous Integration</h3>
+
+<p>Security Analysis. ( <a href="https://blog.aquasec.com/container-security-automation-keeping-up-with-the-devops-crowd">https://blog.aquasec.com/container-security-automation-keeping-up-with-the-devops-crowd</a> )</p>
+<h3 class="mume-header" id="model-driven-architecture">Model Driven Architecture</h3>
+
+<p>The model-driven architecture approach defines system functionality using a platform-independent model (PIM) using an appropriate domain-specific language (DSL).</p>
+<p>Then, given a platform model corresponding to CORBA, .NET, the Web, etc., the PIM is translated to one or more platform-specific models (PSMs) that computers can run. This requires mappings and transformations and should be modelled too.</p>
+<p>The PSM may use different DSLs or a general purpose language.  Automated tools generally perform this translation.</p>
+<p>OMG focuses Model-driven architecture on forward engineering, i.e. producing code from abstract, human-elaborated modelling diagrams.</p>
+<p>Usually involves Code Generation.</p>
+<h3 class="mume-header" id="open-source">Open Source</h3>
+
+<h3 class="mume-header" id="separation-of-concern-encapsulation-modular">Separation of Concern. Encapsulation, Modular</h3>
+
+<h3 class="mume-header" id="separation-of-content-and-presentation">Separation of content and presentation</h3>
+
+<p>HTML &amp; CSS</p>
+<h2 class="mume-header" id="development-conceptstechniques">Development Concepts/Techniques</h2>
+
+<h3 class="mume-header" id="code-generation">Code Generation</h3>
+
+<h3 class="mume-header" id="pairing">Pairing</h3>
+
+<p>Pair Programming.</p>
+<h3 class="mume-header" id="code-review">Code Review</h3>
+
+<p>Simple Definition</p>
+<p>A code review is a process where two or more developers visually inspect a set of program code, typically, several times. The code can be a method, a class, or an entire program. The main code-review objectives are:</p>
+<p>Best Practice ~ A more efficient, less error-prone, or more elegant way to accomplish a given task.</p>
+<p>Error Detection ~ Discovering logical or transitional errors.</p>
+<p>Vulnerability Exposure ~ Identifying and averting common vulnerabilities like Cross-Site Scripting [XSS], Injection, Buffer Overflow, Excessive Disclosure, etc. Although many controls are inapplicable and can be ignored, a STIG [e.g., Application Security STIG 4.3] provides an excellent vulnerability checklist.</p>
+<p>Malware Discovery ~ This often-overlooked, and very special code-review objective looks for segments of code that appear extraneous, questionable, or flat-out weird. The intent is to discover back doors, Trojans, and time bombs. I say often-overlooked because the very idea of malware and malicious intent may ring overly dramatic to some developers. However - particularly in today's peril-ridden world - malevolent code is a very real threat and should not be overlooked… especially by USG agencies and departments like the DoD.</p>
+<p>Of the four objectives, malware is the only one that requires human detection. A program containing an obvious back door can be scanned using a tool like Fortify and come out looking as clean as the driven snow.</p>
+<p>Tools: Atlassian Crucible</p>
+<h3 class="mume-header" id="static-code-analysis">Static Code Analysis</h3>
+
+<p>Options:</p>
+<p>StyleCop,</p>
+<p>NDepend in continuous integration</p>
+<h3 class="mume-header" id="source-code-repo">Source Code Repo</h3>
+
+<p>Options: Bitbucket, VSTS, GitKraken</p>
+<h3 class="mume-header" id="freedom-and-responsibility">Freedom and Responsibility</h3>
+
+<p>The Netflix culture of freedom and responsibility empowers engineers to craft solutions using whatever tools they feel are best suited to the task.</p>
+<h3 class="mume-header" id="devopsdays">DevOpsDays</h3>
+
+<p>DevOpsDays for internal teams, featuring demos, open labs, lightning talks, breakout sessions, and guest keynotes.</p>
+<h3 class="mume-header" id="state-vs-migrations-based-deployments">State vs Migrations-based deployments</h3>
+
+<p><a href="https://www.red-gate.com/hub/product-learning/sql-source-control/moving-from-application-automation-to-true-devops-by-including-the-database">https://www.red-gate.com/hub/product-learning/sql-source-control/moving-from-application-automation-to-true-devops-by-including-the-database</a></p>
+<h2 class="mume-header" id="deployment-strategies">Deployment Strategies</h2>
+
+<h3 class="mume-header" id="recreate">Recreate</h3>
+
+<p>Version A is terminated then version B is rolled out.</p>
+<p>The recreate strategy is a dummy deployment which consists of shutting down version A then deploying version B after version A is turned off. This technique implies downtime of the service that depends on both shutdown and boot duration of the application.</p>
+<p>Pros:</p>
+<ul>
+<li>Easy to setup.</li>
+<li>Application state entirely renewed.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>High impact on the user, expect downtime that depends on both shutdown and boot duration of the application.</li>
+</ul>
+<h3 class="mume-header" id="ramped-also-known-as-rolling-update-or-incremental">Ramped (also known as rolling-update or incremental)</h3>
+
+<p>Version B is slowly rolled out and replacing version A.</p>
+<p>The ramped deployment strategy consists of slowly rolling out a version of an application by replacing instances one after the other until all the instances are rolled out. It usually follows the following process: with a pool of version A behind a load balancer, one instance of version B is deployed. When the service is ready to accept traffic, the instance is added to the pool. Then, one instance of version A is removed from the pool and shut down.</p>
+<p>Depending on the system taking care of the ramped deployment, you can tweak the following parameters to increase the deployment time:</p>
+<ul>
+<li>Parallelism, max batch size: Number of concurrent instances to roll out.</li>
+<li>Max surge: How many instances to add in addition of the current amount.</li>
+<li>Max unavailable: Number of unavailable instances during the rolling update procedure.</li>
+</ul>
+<p>Pros:</p>
+<ul>
+<li>Easy to set up.</li>
+<li>Version is slowly released across instances.</li>
+<li>Convenient for stateful applications that can handle rebalancing of the data.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Rollout/rollback can take time.</li>
+<li>Supporting multiple APIs is hard.</li>
+<li>No control over traffic.</li>
+</ul>
+<h3 class="mume-header" id="bluegreen">Blue/Green</h3>
+
+<p>Version B is released alongside version A, then the traffic is switched to version B.</p>
+<p>The blue/green deployment strategy differs from a ramped deployment, version B (green) is deployed alongside version A (blue) with exactly the same amount of instances. After testing that the new version meets all the requirements the traffic is switched from version A to version B at the load balancer level.</p>
+<p>Pros:</p>
+<ul>
+<li>Instant rollout/rollback.</li>
+<li>Avoid versioning issue, the entire application state is changed in one go.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Expensive as it requires double the resources.</li>
+<li>Proper test of the entire platform should be done before releasing to production.</li>
+<li>Handling stateful applications can be hard.</li>
+<li></li>
+</ul>
+<h3 class="mume-header" id="canary">Canary</h3>
+
+<p>Version B is released to a subset of users, then proceed to a full rollout.</p>
+<p>A canary deployment consists of gradually shifting production traffic from version A to version B. Usually the traffic is split based on weight. For example, 90 percent of the requests go to version A, 10 percent go to version B.</p>
+<p>This technique is mostly used when the tests are lacking or not reliable or if there is little confidence about the stability of the new release on the platform.</p>
+<p>Pros:</p>
+<ul>
+<li>Version released for a subset of users.</li>
+<li>Convenient for error rate and performance monitoring.</li>
+<li>Fast rollback.</li>
+</ul>
+<p>Con:</p>
+<ul>
+<li>Slow rollout.</li>
+<li></li>
+</ul>
+<h3 class="mume-header" id="ab-testing">A/B testing</h3>
+
+<p>Version B is released to a subset of users under specific condition.</p>
+<p>A/B testing deployments consists of routing a subset of users to a new functionality under specific conditions. It is usually a technique for making business decisions based on statistics, rather than a deployment strategy. However, it is related and can be implemented by adding extra functionality to a canary deployment so we will briefly discuss it here.</p>
+<p>This technique is widely used to test conversion of a given feature and only roll-out the version that converts the most.</p>
+<p>Here is a list of conditions that can be used to distribute traffic amongst the versions:</p>
+<ul>
+<li>By browser cookie</li>
+<li>Query parameters</li>
+<li>Geolocalisation</li>
+<li>Technology support: browser version, screen size, operating system, etc.</li>
+<li>Language</li>
+</ul>
+<p>Pros:</p>
+<ul>
+<li>Several versions run in parallel.</li>
+<li>Full control over the traffic distribution.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Requires intelligent load balancer.</li>
+<li>Hard to troubleshoot errors for a given session, distributed tracing becomes mandatory.</li>
+</ul>
+<h3 class="mume-header" id="shadow">Shadow</h3>
+
+<p>Version B receives real-world traffic alongside version A and doesn't impact the response.</p>
+<p>A shadow deployment consists of releasing version B alongside version A, fork version A's incoming requests and send them to version B as well without impacting production traffic. This is particularly useful to test production load on a new feature. A rollout of the application is triggered when stability and performance meet the requirements.</p>
+<p>This technique is fairly complex to setup and needs special requirements, especially with egress traffic. For example, given a shopping cart platform, if you want to shadow test the payment service you can end-up having customers paying twice for their order. In this case, you can solve it by creating a mocking service that replicates the response from the provider.</p>
+<p>Pros:</p>
+<ul>
+<li>Performance testing of the application with production traffic.</li>
+<li>No impact on the user.</li>
+<li>No rollout until the stability and performance of the application meet the requirements.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Expensive as it requires double the resources.</li>
+<li>Not a true user test and can be misleading.</li>
+<li>Complex to setup.</li>
+<li>Requires mocking service for certain cases.</li>
+</ul>
+<h2 class="mume-header" id="architectural-patterns">Architectural Patterns</h2>
+
+<h3 class="mume-header" id="blackboard-system">Blackboard System</h3>
+
+<h3 class="mume-header" id="broker-pattern">Broker Pattern</h3>
+
+<h3 class="mume-header" id="event-driven-architecture">Event-driven architecture</h3>
+
+<p>Used in microservices with messaging systems like RabbitMQ</p>
+<h3 class="mume-header" id="implicit-invocation">Implicit invocation</h3>
+
+<h3 class="mume-header" id="microservices">Microservices</h3>
+
+<p><a href="https://sdtimes.com/authentication/securing-microservices-the-api-gateway-authentication-and-authorization/"><strong>https://sdtimes.com/authentication/securing-microservices-the-api-gateway-authentication-and-authorization/</strong></a></p>
+<p><a href="https://asardana.com/2017/05/20/jwt-token-based-authentication/"><strong>https://asardana.com/2017/05/20/jwt-token-based-authentication/</strong></a></p>
+<h3 class="mume-header" id="layers">Layers</h3>
+
+<h4 class="mume-header" id="domain-layer">Domain Layer</h4>
+
+<ul>
+<li>Entities</li>
+<li>Value Objects</li>
+<li>Repositories</li>
+<li>Domain Services</li>
+<li>Specifications</li>
+<li>Unit of Work</li>
+<li>Domain Events (EventBus)</li>
+<li>Data Filters</li>
+</ul>
+<h4 class="mume-header" id="application-layer">Application Layer</h4>
+
+<ul>
+<li>Application Services</li>
+<li>Data Transfer Objects</li>
+<li>Validating Data Transfer Objects</li>
+<li>Authorization</li>
+<li>Feature Management</li>
+<li>Audit Logging</li>
+</ul>
+<h4 class="mume-header" id="distributed-service-layer">Distributed Service Layer</h4>
+
+<ul>
+<li><a href="http://ASP.NET">ASP.NET</a> Web API</li>
+<li>Web API Controllers</li>
+<li>Dynamic Web API Layer</li>
+<li>OData Integration</li>
+<li>Swagger UI Integration</li>
+</ul>
+<h4 class="mume-header" id="presentation-layer">Presentation Layer</h4>
+
+<ul>
+<li><a href="http://ASP.NET">ASP.NET</a> MVC</li>
+<li>MVC Controllers</li>
+<li>MVC Views</li>
+<li>Handling Exceptions</li>
+<li>Localization</li>
+<li>Navigation</li>
+<li>Embedded Resources</li>
+<li>Javascript API</li>
+<li>CSRF/XSRF Protection</li>
+</ul>
+<h4 class="mume-header" id="infrastructure-layer">Infrastructure Layer</h4>
+
+<ul>
+<li>Background Services</li>
+<li>Background Jobs and Workers</li>
+<li>Hangfire Integration</li>
+<li>Quartz Integration</li>
+<li>Real Time Services</li>
+<li>Notification System</li>
+<li>SignalR Integration</li>
+<li>Object-Relational Mapping</li>
+<li>EntityFramework Integration</li>
+<li>EntityFramework Core Integration</li>
+<li>NHibernate Integration</li>
+<li>Dapper Integration</li>
+</ul>
+<h3 class="mume-header" id="model-view-whatever">Model-View-Whatever</h3>
+
+<h3 class="mume-header" id="entity-component-system">Entity Component System</h3>
+
+<h3 class="mume-header" id="multitier-architecture">Multitier Architecture</h3>
+
+<h3 class="mume-header" id="naked-objects">Naked Objects</h3>
+
+<h3 class="mume-header" id="operational-data-store">Operational Data Store</h3>
+
+<h3 class="mume-header" id="peer-to-peer">Peer-to-Peer</h3>
+
+<h3 class="mume-header" id="pipe-and-filter-architecture">Pipe and Filter Architecture</h3>
+
+<h3 class="mume-header" id="service-oriented-architecture">Service Oriented Architecture</h3>
+
+<h3 class="mume-header" id="space-based-architecture">Space Based Architecture</h3>
+
+<h3 class="mume-header" id="model-driven-architecture-1">Model-Driven Architecture</h3>
+
+<p>Provides a set of guidelines for the structuring of specifications, which are expressed as models. Model-driven architecture is a kind of domain engineering, and supports model-driven engineering of software systems</p>
+<h2 class="mume-header" id="solid-design-principles">Solid Design Principles</h2>
+
+<h3 class="mume-header" id="single-responsibility">Single Responsibility</h3>
+
+<p>A class should have one and only one reason to change, meaning that a class should have only one job.</p>
+<h3 class="mume-header" id="open-closed">Open Closed</h3>
+
+<p>Objects or entities should be open for extension, but closed for modification.</p>
+<h3 class="mume-header" id="liskov-substitution">Liskov Substitution</h3>
+
+<p>Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.</p>
+<h3 class="mume-header" id="interface-segregation">Interface Segregation</h3>
+
+<p>A client should never be forced to implement an interface that it doesn't use, or clients shouldn't be forced to depend on methods they do not use.</p>
+<h3 class="mume-header" id="dependency-inversion-or-inversion-of-control">Dependency Inversion or Inversion of Control</h3>
+
+<p>Entities must depend on abstractions not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.</p>
+<p>&quot;Hollywood Principle&quot; – &quot;don't call me, I'll call you.&quot;</p>
+<h2 class="mume-header" id="other-design-principlestechniques">Other Design Principles/Techniques</h2>
+
+<h3 class="mume-header" id="law-of-demetor">Law of Demetor</h3>
+
+<p>The Law of Demeter (LoD) or principle of least knowledge is a design guideline for developing software, particularly object-oriented programs. In its general form, the LoD is a specific case of loose coupling. The guideline was proposed by Ian Holland at Northeastern University towards the end of 1987, and can be succinctly summarized in each of the following ways:[1]</p>
+<p>Each unit should have only limited knowledge about other units: only units &quot;closely&quot; related to the current unit.</p>
+<p>Each unit should only talk to its friends; don't talk to strangers.</p>
+<p>Only talk to your immediate friends.</p>
+<p>The fundamental notion is that a given object should assume as little as possible about the structure or properties of anything else (including its subcomponents), in accordance with the principle of &quot;information hiding&quot;. It may be viewed as a corollary to the principle of least privilege, which dictates that a module possess only the information and resources necessary for its legitimate purpose.</p>
+<p>It is so named for its origin in the Demeter Project, an adaptive programming and aspect-oriented programming effort. The project was named in honor of Demeter, &quot;distribution-mother&quot; and the Greek goddess of agriculture, to signify a bottom-up philosophy of programming which is also embodied in the law itself.</p>
+<h3 class="mume-header" id="dry-principle-of-abstraction">DRY/ Principle of Abstraction</h3>
+
+<p>Do not repeat yourself</p>
+<p>Code Reuse, Loose Coupling</p>
+<h3 class="mume-header" id="program-to-an-interface-not-an-implementation">&quot;Program to an 'interface', not an 'implementation'.&quot;</h3>
+
+<h3 class="mume-header" id="composition-over-inheritance-favour-object-composition-over-class-inheritance">Composition over inheritance: &quot;Favour 'object composition' over 'class inheritance'.&quot;</h3>
+
+<h3 class="mume-header" id="generics-parameterised-types">Generics / Parameterised Types</h3>
+
+<h3 class="mume-header" id="pseudo-code">Pseudo code</h3>
+
+<h3 class="mume-header" id="object-modelling">Object Modelling</h3>
+
+<h3 class="mume-header" id="extensibility">Extensibility</h3>
+
+<p>Extensibility is a software engineering and systems design principle where the implementation takes future growth into consideration. The term extensibility can also be seen as a systemic measure of the ability to extend a system and the level of effort required to implement the extension. Extensions can be through the addition of new functionality or through modification of existing functionality. The central theme is to provide for change – typically enhancements – while minimizing impact to existing system functions.</p>
+<h2 class="mume-header" id="creational-design-patterns">Creational Design Patterns</h2>
+
+<h3 class="mume-header" id="abstract-factory-gof">Abstract factory (GoF)</h3>
+
+<p>[1] Provides a way to encapsulate a group of individual  <a href="https://en.wikipedia.org/wiki/Factory_object">factories</a> that have a common theme without specifying their concrete classes.</p>
+<p>Used in <a href="http://ADO.net">ADO.net</a>.</p>
+<h3 class="mume-header" id="builder-gof">Builder (GoF)</h3>
+
+<p>Separate the construction of a complex object from its representation, allowing the same construction process to create various representations.</p>
+<h3 class="mume-header" id="dependency-injection-supports-dependency-inversion">Dependency Injection (supports Dependency Inversion)</h3>
+
+<p>A class accepts the objects it requires from an injector instead of creating the objects directly. Allows for dependencies to easily be swapped out for testing purposes.</p>
+<p>Used in <a href="http://ASP.net">ASP.net</a> Core Services</p>
+<p>Used in Angular Components</p>
+<p>High usefulness</p>
+<h3 class="mume-header" id="factory-method-gof">Factory Method (GoF)</h3>
+
+<p>uses factory methods to deal with the problem of  <a href="https://en.wikipedia.org/wiki/Object_creation">creating objects</a> without having to specify the exact  <a href="https://en.wikipedia.org/wiki/Class_(computer_programming)">class</a> of the object that will be created.</p>
+<p>Used in In <a href="http://ADO.NET">ADO.NET</a>, IDbCommand.CreateParameter.</p>
+<h3 class="mume-header" id="lazy-initialization">Lazy initialization</h3>
+
+<p>Tactic of delaying the creation of an object, the calculation of a value, or some other expensive process until the first time it is needed. This pattern appears in the GoF catalog as &quot;virtual proxy&quot;, an implementation strategy for the  <a href="https://en.wikipedia.org/wiki/Proxy_pattern">Proxy</a> pattern.</p>
+<p>Used in ?</p>
+<h3 class="mume-header" id="multiton">Multiton</h3>
+
+<p>The multiton pattern expands on the singleton concept to manage a  <a href="https://en.wikipedia.org/wiki/Associative_array">map</a> of named instances as key-value pairs.</p>
+<p>Used in ?</p>
+<p>Low usefulness.</p>
+<h3 class="mume-header" id="object-pool">Object Pool</h3>
+
+<p>Avoid expensive acquisition and release of resources by recycling objects that are no longer in use. Can be considered a generalisation of connection pool and thread pool patterns.</p>
+<p>Used in System.Threading.ThreadPool and ConnectionPool</p>
+<h3 class="mume-header" id="prototype-gof">Prototype (GoF)</h3>
+
+<p>Specify the kinds of objects to create using a prototypical instance, and create new objects from the 'skeleton' of an existing object, thus boosting performance and keeping memory footprints to a minimum.</p>
+<h3 class="mume-header" id="singleton-gof">Singleton (GoF)</h3>
+
+<p>Ensure a class has only one instance, and provide a global point of access to it.</p>
+<h2 class="mume-header" id="structural-design-patterns">Structural Design Patterns</h2>
+
+<h3 class="mume-header" id="cqrs">CQRS</h3>
+
+<p>(Uncertain about plcaing CQRS in Structural patterns)</p>
+<h3 class="mume-header" id="adapter-wrapper-or-translator-gof">Adapter, Wrapper, or Translator (GoF)</h3>
+
+<p>Convert the interface of a class into another interface clients expect. An adapter lets classes work together that could not otherwise because of incompatible interfaces. The enterprise integration pattern equivalent is the translator.</p>
+<h3 class="mume-header" id="bridgehandlebody-gof">Bridge/Handle/Body (GoF)</h3>
+
+<p>Decouple an abstraction from its implementation allowing the two to vary independently.</p>
+<p><em>// Helps in providing truly decoupled architecture</em></p>
+<p>public interface IBridge<br>
+{</p>
+<pre class="language-text">**void** Function1();
+
+**void** Function2();
+</pre>
+<p>}</p>
+<p><strong>public</strong>** class **<strong>Bridge1</strong> : IBridge</p>
+<p>{</p>
+<pre class="language-text">**public**** void**Function1()
+
+{
+
+    Console.WriteLine(&quot;Bridge1.Function1&quot;);
+
+}
+
+**public**** void**Function2()
+
+{
+
+    Console.WriteLine(&quot;Bridge1.Function2&quot;);
+
+}
+</pre>
+<p>}</p>
+<p><strong>public</strong>** class **<strong>Bridge2</strong> : IBridge</p>
+<p>{</p>
+<pre class="language-text">**public**** void**Function1()
+
+{
+
+    Console.WriteLine(&quot;Bridge2.Function1&quot;);
+
+}
+
+**public**** void**Function2()
+
+{
+
+    Console.WriteLine(&quot;Bridge2.Function2&quot;);
+
+}
+</pre>
+<p>}</p>
+<p><strong>public</strong>** interface** IAbstractBridge</p>
+<p>{</p>
+<pre class="language-text">**void** CallMethod1();
+
+**void** CallMethod2();
+</pre>
+<p>}</p>
+<p><strong>public</strong>** class **<strong>AbstractBridge</strong> : IAbstractBridge</p>
+<p>{</p>
+<pre class="language-text">**public** IBridge bridge;
+
+**public** AbstractBridge(IBridge bridge)
+
+{
+
+    **this**.bridge = bridge;
+
+}
+
+**public**** void**CallMethod1()
+
+{
+
+    **this**.bridge.Function1();
+
+}
+
+publicvoidCallMethod2()
+
+{
+
+    **this**.bridge.Function2();
+
+}
+</pre>
+<p>}</p>
+<h3 class="mume-header" id="decorator-gof">? Decorator (GoF)</h3>
+
+<p>Attach additional responsibilities to an object dynamically keeping the same interface. Decorators provide a flexible alternative to sub-classing for extending functionality.</p>
+<p>Used in WPF. Grid.Row.</p>
+<h3 class="mume-header" id="extension-object">Extension Object</h3>
+
+<p>Adding functionality to a hierarchy without changing the hierarchy.</p>
+<h3 class="mume-header" id="fa%C3%A7ade-gof">? Façade (GoF)</h3>
+
+<p>Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.</p>
+<h3 class="mume-header" id="flyweight-gof">? Flyweight (GoF)</h3>
+
+<p>Use sharing to support large numbers of similar objects efficiently.</p>
+<h3 class="mume-header" id="front-controller">? Front controller</h3>
+
+<p>The pattern relates to the design of Web applications. It provides a centralized entry point for handling requests.</p>
+<h3 class="mume-header" id="marker">? Marker</h3>
+
+<p>Empty interface to associate metadata with a class.</p>
+<h3 class="mume-header" id="module">Module</h3>
+
+<p>Group several related elements, such as classes, singletons, methods, globally used, into a single conceptual entity.</p>
+<h3 class="mume-header" id="proxy">? Proxy</h3>
+
+<p>Provide a surrogate or placeholder for another object to control access to it</p>
+<h3 class="mume-header" id="twin">Twin</h3>
+
+<p>Twin allows modelling of multiple inheritance in programming languages that do not support this feature.</p>
+<h3 class="mume-header" id="composite-gof">Composite (GoF)</h3>
+
+<p>Compose objects into tree structures to represent part-whole hierarchies. Composite lets</p>
+<p>clients treat individual objects and compositions of objects uniformly.</p>
+<p>A <em>recursive composition</em> is a hierarchical structure of elements, that builds &quot;increasingly complex elements out of simpler ones&quot; (pp36). Each node in the structure knows of its own children and its parent. If an operation is to be performed on the whole structure, each node calls the operation on its children (recursively).</p>
+<h2 class="mume-header" id="behavioural-design-patterns">Behavioural Design Patterns</h2>
+
+<h3 class="mume-header" id="event-sourcing">Event Sourcing</h3>
+
+<p>(Is this bahavioural?)</p>
+<h3 class="mume-header" id="blackboard">? Blackboard</h3>
+
+<p>Artificial intelligence pattern for combining disparate sources of data</p>
+<h3 class="mume-header" id="chain-of-responsibility">Chain of Responsibility</h3>
+
+<p>Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.</p>
+<p>Use for logging handlers to log at one of a variety of levels.</p>
+<h3 class="mume-header" id="command">Command</h3>
+
+<p>Encapsulate a request as an object, thereby allowing for the parameterization of clients with different requests, and the queuing or logging of requests. It also allows for the support of undoable operations</p>
+<h3 class="mume-header" id="interpreter">? Interpreter</h3>
+
+<p>Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language</p>
+<h3 class="mume-header" id="iterator">Iterator</h3>
+
+<p>Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.</p>
+<h3 class="mume-header" id="mediator">? Mediator</h3>
+
+<p>Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it allows their interaction to vary independently.</p>
+<h3 class="mume-header" id="memento">? Memento</h3>
+
+<p>Without violating encapsulation, capture and externalize an object's internal state allowing the object to be restored to this state later.</p>
+<h3 class="mume-header" id="null-object">? Null Object</h3>
+
+<p>Avoid null references by providing a default object.</p>
+<h3 class="mume-header" id="observerpublish-subscribe">Observer/Publish Subscribe</h3>
+
+<p>Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.</p>
+<h3 class="mume-header" id="servant">? Servant</h3>
+
+<p>Define common functionality for a group of classes.</p>
+<h3 class="mume-header" id="specification">? Specification</h3>
+
+<p>Re-combinable business logic in a Boolean fashion.</p>
+<h3 class="mume-header" id="state">? State</h3>
+
+<p>Allow an object to alter its behaviour when its internal state changes. The object will appear to change its class.</p>
+<h3 class="mume-header" id="strategy">Strategy</h3>
+
+<p>Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.</p>
+<p>The Strategy Design Pattern allows an object to have some or all of its behavior defined in terms of another object which follows a particular interface.  A particular instance of this interface is provided to the client when it is instantiated or invoked, providing the concrete behavior to be used.  The Strategy design pattern is used extensively to achieve the Single Responsibility Principle, the Explicit Dependencies Principle, and the Dependency Inversion Principle, and is a key to Dependency Injection and the use of Inversion of Control Containers.</p>
+<h3 class="mume-header" id="template-method">Template Method</h3>
+
+<p>Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.</p>
+<h3 class="mume-header" id="visitor">? Visitor</h3>
+
+<p>Represent an operation to be performed on the elements of an object structure. Visitor lets a new operation be defined without changing the classes of the elements on which it operates</p>
+<h3 class="mume-header" id="repository-pattern">Repository Pattern</h3>
+
+<p>The Repository Pattern has gained quite a bit of popularity since it was first introduced as a part of Domain-Driven Design in 2004. Essentially, it provides an abstraction of data, so that your application can work with a simple abstraction that has an interface approximating that of a collection. Adding, removing, updating, and selecting items from this collection is done through a series of straightforward methods, without the need to deal with database concerns like connections, commands, cursors, or readers. Using this pattern can help achieve loose coupling and can keep domain objects persistence ignorant. Although the pattern is very popular (or perhaps because of this), it is also frequently misunderstood and misused. There are many different ways to implement the Repository pattern.</p>
+<h3 class="mume-header" id="pluginmicrokernel">Plugin/Microkernel</h3>
+
+<p>Links classes during configuration rather than compilation. Inversion of control.</p>
+<p>The microkernel architecture pattern (sometimes referred to as the plug-in architecture pattern) is a natural pattern for implementing product-based applications. A product-based application is one that is packaged and made available for download in versions as a typical third-party product. However, many companies also develop and release their internal business applications like software products, complete with versions, release notes, and pluggable features. These are also a natural fit for t</p>
+<h2 class="mume-header" id="concurrency-design-patterns">Concurrency Design Patterns</h2>
+
+<h3 class="mume-header" id="active-object">? Active Object</h3>
+
+<p>Decouples method execution from method invocation that reside in their own thread of control. The goal is to introduce concurrency, by using asynchronous method invocation and a scheduler for handling requests.</p>
+<h3 class="mume-header" id="balking">? Balking</h3>
+
+<p>Only execute an action on an object when the object is in a particular state.</p>
+<h3 class="mume-header" id="binding-properties">Binding properties</h3>
+
+<p>Combining multiple observers to force properties in different objects to be synchronized or coordinated in some way.</p>
+<p>Used in MVVM and Angular</p>
+<h3 class="mume-header" id="blockchain">? Blockchain</h3>
+
+<p>Decentralized way to store data and agree on ways of processing it in a Merkle tree, optionally using digital signature for any individual contributions.</p>
+<h3 class="mume-header" id="double-checked-locking">? Double-checked locking</h3>
+
+<p>Reduce the overhead of acquiring a lock by first testing the locking criterion (the 'lock hint') in an unsafe manner; only if that succeeds does the actual locking logic proceed.</p>
+<h3 class="mume-header" id="event-based-asynchronous">? Event-based asynchronous</h3>
+
+<p>Addresses problems with the asynchronous pattern that occur in multithreaded programs.</p>
+<h3 class="mume-header" id="guarded-suspension">? Guarded Suspension</h3>
+
+<p>Manages operations that require both a lock to be acquired and a precondition to be satisfied before the operation can be executed.</p>
+<h3 class="mume-header" id="join">? Join</h3>
+
+<p>Join-pattern provides a way to write concurrent, parallel and distributed programs by message passing. Compared to the use of threads and locks, this is a high-level programming model.</p>
+<h3 class="mume-header" id="lock">Lock</h3>
+
+<p>One thread puts a &quot;lock&quot; on a resource, preventing other threads from accessing or modifying it.</p>
+<h3 class="mume-header" id="messaging-design-pattern-mdp">? Messaging design pattern (MDP)</h3>
+
+<p>Allows the interchange of information (i.e. messages) between components and applications.</p>
+<h3 class="mume-header" id="monitor-object">? Monitor object</h3>
+
+<p>An object whose methods are subject to mutual exclusion, thus preventing multiple objects from erroneously trying to use it at the same time.</p>
+<h3 class="mume-header" id="reactor">? Reactor</h3>
+
+<p>A reactor object provides an asynchronous interface to resources that must be handled synchronously.</p>
+<h3 class="mume-header" id="read-write-lock">? Read-write lock</h3>
+
+<p>Allows concurrent read access to an object, but requires exclusive access for write operations.</p>
+<h3 class="mume-header" id="scheduler">? Scheduler</h3>
+
+<p>Explicitly control when threads may execute single-threaded code.</p>
+<h3 class="mume-header" id="thread-pool">.Thread Pool</h3>
+
+<p>A number of threads are created to perform a number of tasks, which are usually organized in a queue. Typically, there are many more tasks than threads. Can be considered a special case of the object pool pattern.</p>
+<h3 class="mume-header" id="thread-specific-storage">Thread-Specific Storage</h3>
+
+<p>Static or &quot;global&quot; memory local to a thread</p>
+<h2 class="mume-header" id="anti-patterns">Anti-Patterns</h2>
+
+<h3 class="mume-header" id="service-locator-pattern">Service Locator Pattern</h3>
+
+<p>Used in software development to encapsulate the processes involved in obtaining a service with a strong abstraction layer. This pattern uses a central registry known as the &quot;service locator&quot;, which on request returns the information necessary to perform a certain task.[1] Note that many[weasel words] consider service locator to actually be an anti-pattern.[2]</p>
+<h3 class="mume-header" id="bikeshedding">Bikeshedding</h3>
+
+<p>bikeshed +‎ -ing. The term was coined as a metaphor to illuminate Parkinson's Law of Triviality. Parkinson observed that a committee whose job is to approve plans for a nuclear power plant may spend the majority of its time on relatively unimportant but easy-to-grasp issues, such as what materials to use for the staff bikeshed, while neglecting the design of the power plant itself, which is far more important but also far more difficult to criticize constructively. It was popularized in the Berkeley Software Distribution community by Poul-Henning Kamp[1] and has spread from there to the software industry at large.</p>
+<p>Futile investment of time and energy in discussion of marginal technical issues.</p>
+<p>Procrastination.</p>
+<h2 class="mume-header" id="testing">Testing</h2>
+
+<h3 class="mume-header" id="unit-testing">Unit Testing</h3>
+
+<h3 class="mume-header" id="integration-testing">Integration Testing</h3>
+
+<p>An integration test is a test which validate that a solution and its components when assembled works as expected.</p>
+<p>Selenium webdriver</p>
+<p><a href="https://automatetheplanet.com/webdriver-dotnetcore2/">https://automatetheplanet.com/webdriver-dotnetcore2/</a></p>
+<h3 class="mume-header" id="behaviour-testing">Behaviour Testing</h3>
+
+<p>A behavior test is a test which validates a scenario in general and which does not rely on implementation details.<br>
+<a href="http://cucumber.io">Cucumber</a></p>
+<h3 class="mume-header" id="penetration-testing">Penetration testing</h3>
+
+<p>Security testing</p>
+<h3 class="mume-header" id="faking">Faking</h3>
+
+<p>Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production.</p>
+<p>Fake: We acquire or build a very lightweight implementation of the same functionality as provided by a component that the SUT depends on and instruct the SUT to use it instead of the real.</p>
+<h3 class="mume-header" id="mocking">Mocking</h3>
+
+<p>Mocks are what we are talking about here: objects pre-programmed with expectations which form a specification of the calls they are expected to receive.</p>
+<p>Mock Object that implements the same interface as an object on which the SUT (System Under Test) depends. We can use a Mock Object as an observation point when we need to do Behavior Verification to avoid having an Untested Requirement (see Production Bugs on page X) caused by an inability to observe side-effects of invoking methods on the SUT.</p>
+<p>The main thing to remember about mocks versus stubs is that mocks are just like stubs, but you assert against the mock object, whereas you do not assert against a stub.</p>
+<h3 class="mume-header" id="stubbing">Stubbing</h3>
+
+<p>Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test. Stubs may also record information about calls, such as an email gateway stub that remembers the messages it 'sent', or maybe only how many messages it 'sent'</p>
+<p>Stub : This implementation is configured to respond to calls from the SUT with the values (or exceptions) that will exercise the Untested Code (see Production Bugs on page X) within the SUT. A key indication for using a Test Stub is having Untested Code caused by the inability to control the indirect inputs of the SUT</p>
+<h2 class="mume-header" id="formatting">Formatting</h2>
+
+<h3 class="mume-header" id="cases">Cases</h3>
+
+<p>PascalCase for classes and methods</p>
+<p>camelCase for parameters</p>
+<p>_underscore for private variables</p>
+<h3 class="mume-header" id="use-smart-variables">Use smart variables</h3>
+
+<p>Using smart variables is very important if you want to make your code even slightly decipherable after a time away.</p>
+<p>The obvious tip is to name the variables based on what they do. So, maybe don't call the user name string MonkeyWrench –  call it UserName.</p>
+<p>Where possible, try to make your code read in a manner similar to English. This is something that becomes especially apparent when using Booleans (true or false statements).</p>
+<p>Of course, you should also be equally logical when choosing names for methods and classes.</p>
+<h3 class="mume-header" id="avoid-magic-numbers">Avoid magic numbers</h3>
+
+<p>In some ways, magic numbers are more of a problem than randomly named variables. These are numbers that you assign special meaning to that are completely arbitrary.</p>
+<p>For example, I created an 'overshoot' animation from scratch so that a view would slide in from the edge of the screen, overshoot its end destination, and then appear to 'ping' back into the correct place.</p>
+<p>We know that '0' is left and '1' is right. But does everyone else?</p>
+<p>To do this, I allowed the image to overshoot its mark by 30 pixels before pinging back. The question you should ask at this point is 'why 30'?</p>
+<p>A more common example of this might be the old 'Facing' variable in a basic 2D game. The player can face left or right and in many cases, we will assign one of these directions to '0' and one of these directions to '1'. We know that '0' is left and '1' is right. But does everyone else? Will we still know that in one month, or one year?</p>
+<p>What should you do instead? Well, you could create constants. For instance:</p>
+<p>private static final int left = 0;</p>
+<p>private static final int right = 1;</p>
+<p>Now you can say if (Facing = left) and that is hugely more readable.</p>
+<p>Likewise, instead of pinging back at '30' we could ping back at overshootAmount or something similar. This also has the added bonus of allowing us to easily tweak how exaggerated our animations are. We could even make this an option available for the user to change.</p>
+<h3 class="mume-header" id="methods-and-classes-for-everything">Methods and classes for everything</h3>
+
+<p>Create methods and classes wherever possible to break up your code. If you then give those methods logical, readable names, then your code will end up short and easy to follow with the option to dig into the nuts and bolts of each step only as necessary: if this, get this number, then draw picture on screen, then save this file…</p>
+<p>If you follow this line of logic, larger methods will be broken down into multiple smaller methods. This not only keeps everything nicely organized on the screen allowing you to handle it in digestible chunks; it also makes them more portable for using in future projects. Just grab a method and drop it into your next program and you've saved yourself a ton of time.</p>
+<h3 class="mume-header" id="comment-and-comment-well">Comment and comment well</h3>
+
+<p>Not only should you comment your code but you should also keep in mind a tip someone taught me: don't just write what a section of code does, write why it is important. This helps to contextualize the code and presents the bigger picture of how this method or line fits into the grand scheme of things.</p>
+<p>You can also use comments for a variety of other purposes. One trick I like is to use a kind of 'keyword' for code that needs looking at later, or code that I'm about to jump back to. If I need to quickly jump into another part of the code for reference, then using this keyword I can then perform a search to get back to where I just was. Likewise, if I earmark lines that need polish in this way, I can quickly sift through the page to find things that need brushing up.</p>
+<p>avoid the temptation to simply comment out the code you no longer want</p>
+<p>One last pointer: avoid the temptation to simply comment out the code you no longer want. This can be tempting as it allows you to save said code for later in case you need it, but it can hurt readability and make a project harder to navigate. If you're anxious to delete old code, keep it in a notepad document or something instead.</p>
+<h3 class="mume-header" id="dont-reinvent-the-wheel">Don't reinvent the wheel</h3>
+
+<p>The great thing about programming is that a lot of it is done for you. There are so many libraries, classes and example snippets of code that you're free to use, that with some smart Googling you can pretty much build your app out of ready-made parts.</p>
+<p>This saves a lot of time when building something complex. What's more, is that if you're liberating a piece of open source code from Github, chances are it has been worked on by multiple people and fine tuned to perfection. In other words, it's probably better than the code you'd make if you quickly tried to piece something together yourself. You might even learn some good habits by looking at it.</p>
+<p>Of course, it's very important that you always give credit where it's due and only use code with a Creative Commons license.</p>
+<h2 class="mume-header" id="uncategorised">Uncategorised</h2>
+
+<h3 class="mume-header" id="high-cohesion">High Cohesion</h3>
+
+<h3 class="mume-header" id="loose-coupling">Loose Coupling</h3>
+
+<p>In  <a href="https://en.wikipedia.org/wiki/Software_engineering">software engineering</a>, coupling is the degree of interdependence between software modules; a measure of how closely connected two routines or modules are; the strength of the relationships between modules.</p>
+<h3 class="mume-header" id="modular">Modular</h3>
+
+<ol start="2">
+<li>135.Fluent Interface</li>
+</ol>
+<p>Method for constructing object oriented APIs, where the readability of the source code is close to that of ordinary written prose.</p>
+<h3 class="mume-header" id="encapsulation">Encapsulation</h3>
+
+<p>Refers to the bundling of data with the methods that operate on that data. [5] Encapsulation is used to hide the values or state of a structured data object inside a class, preventing unauthorized parties' direct access to them.</p>
+<h3 class="mume-header" id="session">Session</h3>
+
+<h3 class="mume-header" id="caching">Caching</h3>
+
+<h3 class="mume-header" id="logging">Logging</h3>
+
+<h3 class="mume-header" id="setting-management">Setting management</h3>
+
+<h3 class="mume-header" id="timing">Timing</h3>
+
+<h3 class="mume-header" id="object-to-object-mapping-auto-mapping">Object to Object Mapping (Auto Mapping)</h3>
+
+<h2 class="mume-header" id="left-out">Left Out</h2>
+
+<h3 class="mume-header" id="resource-acquisition-is-initialization-raii">Resource acquisition is initialization (RAII)</h3>
+
+<h2 class="mume-header" id="references">References</h2>
+
+<h3 class="mume-header" id="httpsenwikipediaorgwikiabstract_factory_patternhttpsenwikipediaorgwikiabstract_factory_pattern"><a href="https://en.wikipedia.org/wiki/Abstract_factory_pattern">https://en.wikipedia.org/wiki/Abstract_factory_pattern</a></h3>
+
+<h3 class="mume-header" id="httpwwwoodesigncomhttpwwwoodesigncom"><a href="http://www.oodesign.com/">http://www.oodesign.com/</a></h3>
+
+<h3 class="mume-header" id="httpsenwikipediaorgwikisoftware_design_patternhttpsenwikipediaorgwikisoftware_design_pattern"><a href="https://en.wikipedia.org/wiki/Software_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a></h3>
+
+<h3 class="mume-header" id="httpsenwikipediaorgwikiarchitectural_patternhttpsenwikipediaorgwikiarchitectural_pattern"><a href="https://en.wikipedia.org/wiki/Architectural_pattern">https://en.wikipedia.org/wiki/Architectural_pattern</a></h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Lean_software_development">https://en.wikipedia.org/wiki/Lean_software_development</a></p>
+<p><a href="http://deviq.com/repository-pattern/">http://deviq.com/repository-pattern/</a></p>
+<p><a href="http://deviq.com/strategy-design-pattern/">http://deviq.com/strategy-design-pattern/</a></p>
+<p><a href="http://codebetter.com/jeremymiller/2005/09/13/inversion-of-control-with-the-plugin-pattern/">http://codebetter.com/jeremymiller/2005/09/13/inversion-of-control-with-the-plugin-pattern/</a></p>
+<p><a href="https://thenewstack.io/deployment-strategies/">https://thenewstack.io/deployment-strategies/</a></p>
+<p><a href="http://geeklearning.io/a-different-approach-to-test-your-asp-net-core-application/">http://geeklearning.io/a-different-approach-to-test-your-asp-net-core-application/</a></p>
+<h2 class="mume-header" id="books">Books</h2>
+
+<h3 class="mume-header" id="httpsenwikipediaorgwikithe_pragmatic_programmerhttpsenwikipediaorgwikithe_pragmatic_programmer"><a href="https://en.wikipedia.org/wiki/The_Pragmatic_Programmer">https://en.wikipedia.org/wiki/The_Pragmatic_Programmer</a></h3>
+
+<h3 class="mume-header" id="httpsenwikipediaorgwikidesign_patternshttpsenwikipediaorgwikidesign_patterns-by-gang-of-four"><a href="https://en.wikipedia.org/wiki/Design_Patterns">https://en.wikipedia.org/wiki/Design_Patterns</a> by Gang of Four</h3>
+
+<h3 class="mume-header" id="httpsenwikipediaorgwikicode_completehttpsenwikipediaorgwikicode_complete"><a href="https://en.wikipedia.org/wiki/Code_Complete">https://en.wikipedia.org/wiki/Code_Complete</a></h3>
+
+<h3 class="mume-header" id="httpsmartinfowlercombookseaahtmlhttpsmartinfowlercombookseaahtml-by-martin-fowler"><a href="https://martinfowler.com/books/eaa.html">https://martinfowler.com/books/eaa.html</a> by Martin Fowler</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Extreme_programming">https://en.wikipedia.org/wiki/Extreme_programming</a></p>
+<p><a href="https://itrevolution.com/book/the-phoenix-project/">https://itrevolution.com/book/the-phoenix-project/</a></p>
+<p>Other reading</p>
+<p><a href="https://en.wikipedia.org/wiki/The_Mythical_Man-Month">https://en.wikipedia.org/wiki/The_Mythical_Man-Month</a></p>
+<h2 class="mume-header" id="courses">Courses</h2>
+
+<h3 class="mume-header" id="source-code-warriorhttpsnew-wwwsecurecodewarriorcomdeveloper"><a href="https://new-www.securecodewarrior.com/developer/">Source Code Warrior</a></h3>
+
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#coding">Coding</a>
+<ul>
+<li><a href="#programming-paradigms">Programming Paradigms</a>
+<ul>
+<li><a href="#object-oriented">Object Oriented</a></li>
+<li><a href="#functional">Functional</a></li>
+<li><a href="#declarative">Declarative</a></li>
+<li><a href="#aspect-oriented">Aspect-oriented</a></li>
+</ul>
+</li>
+<li><a href="#development-methodologies">Development Methodologies</a>
+<ul>
+<li><a href="#devops">DevOps</a></li>
+<li><a href="#agile">Agile</a></li>
+<li><a href="#extreme">Extreme</a></li>
+<li><a href="#lean">Lean</a>
+<ul>
+<li><a href="#eliminate-waste">Eliminate waste</a></li>
+<li><a href="#amplify-learning">Amplify learning</a></li>
+<li><a href="#decide-as-late-as-possible">Decide as late as possible</a></li>
+<li><a href="#deliver-as-fast-as-possible">Deliver as fast as possible</a></li>
+<li><a href="#empower-the-team">Empower the team</a></li>
+<li><a href="#build-integrity-in">Build integrity in</a></li>
+<li><a href="#see-the-whole">See the whole</a></li>
+</ul>
+</li>
+<li><a href="#kaizen">Kaizen</a></li>
+<li><a href="#test-driven-development">Test-driven Development</a></li>
+<li><a href="#continuous-test-driven-development">Continuous Test-driven Development</a></li>
+<li><a href="#behaviour-driven-development">Behaviour-driven development</a></li>
+<li><a href="#waterfall">Waterfall</a></li>
+<li><a href="#cowboy">Cowboy</a></li>
+<li><a href="#abstraction-principle">Abstraction Principle</a></li>
+<li><a href="#big-design-up-front">Big Design Up Front</a></li>
+<li><a href="#continuous-integration">Continuous Integration</a></li>
+<li><a href="#model-driven-architecture">Model Driven Architecture</a></li>
+<li><a href="#open-source">Open Source</a></li>
+<li><a href="#separation-of-concern-encapsulation-modular">Separation of Concern. Encapsulation, Modular</a></li>
+<li><a href="#separation-of-content-and-presentation">Separation of content and presentation</a></li>
+</ul>
+</li>
+<li><a href="#development-conceptstechniques">Development Concepts/Techniques</a>
+<ul>
+<li><a href="#code-generation">Code Generation</a></li>
+<li><a href="#pairing">Pairing</a></li>
+<li><a href="#code-review">Code Review</a></li>
+<li><a href="#static-code-analysis">Static Code Analysis</a></li>
+<li><a href="#source-code-repo">Source Code Repo</a></li>
+<li><a href="#freedom-and-responsibility">Freedom and Responsibility</a></li>
+<li><a href="#devopsdays">DevOpsDays</a></li>
+<li><a href="#state-vs-migrations-based-deployments">State vs Migrations-based deployments</a></li>
+</ul>
+</li>
+<li><a href="#deployment-strategies">Deployment Strategies</a>
+<ul>
+<li><a href="#recreate">Recreate</a></li>
+<li><a href="#ramped-also-known-as-rolling-update-or-incremental">Ramped (also known as rolling-update or incremental)</a></li>
+<li><a href="#bluegreen">Blue/Green</a></li>
+<li><a href="#canary">Canary</a></li>
+<li><a href="#ab-testing">A/B testing</a></li>
+<li><a href="#shadow">Shadow</a></li>
+</ul>
+</li>
+<li><a href="#architectural-patterns">Architectural Patterns</a>
+<ul>
+<li><a href="#blackboard-system">Blackboard System</a></li>
+<li><a href="#broker-pattern">Broker Pattern</a></li>
+<li><a href="#event-driven-architecture">Event-driven architecture</a></li>
+<li><a href="#implicit-invocation">Implicit invocation</a></li>
+<li><a href="#microservices">Microservices</a></li>
+<li><a href="#layers">Layers</a>
+<ul>
+<li><a href="#domain-layer">Domain Layer</a></li>
+<li><a href="#application-layer">Application Layer</a></li>
+<li><a href="#distributed-service-layer">Distributed Service Layer</a></li>
+<li><a href="#presentation-layer">Presentation Layer</a></li>
+<li><a href="#infrastructure-layer">Infrastructure Layer</a></li>
+</ul>
+</li>
+<li><a href="#model-view-whatever">Model-View-Whatever</a></li>
+<li><a href="#entity-component-system">Entity Component System</a></li>
+<li><a href="#multitier-architecture">Multitier Architecture</a></li>
+<li><a href="#naked-objects">Naked Objects</a></li>
+<li><a href="#operational-data-store">Operational Data Store</a></li>
+<li><a href="#peer-to-peer">Peer-to-Peer</a></li>
+<li><a href="#pipe-and-filter-architecture">Pipe and Filter Architecture</a></li>
+<li><a href="#service-oriented-architecture">Service Oriented Architecture</a></li>
+<li><a href="#space-based-architecture">Space Based Architecture</a></li>
+<li><a href="#model-driven-architecture-1">Model-Driven Architecture</a></li>
+</ul>
+</li>
+<li><a href="#solid-design-principles">Solid Design Principles</a>
+<ul>
+<li><a href="#single-responsibility">Single Responsibility</a></li>
+<li><a href="#open-closed">Open Closed</a></li>
+<li><a href="#liskov-substitution">Liskov Substitution</a></li>
+<li><a href="#interface-segregation">Interface Segregation</a></li>
+<li><a href="#dependency-inversion-or-inversion-of-control">Dependency Inversion or Inversion of Control</a></li>
+</ul>
+</li>
+<li><a href="#other-design-principlestechniques">Other Design Principles/Techniques</a>
+<ul>
+<li><a href="#law-of-demetor">Law of Demetor</a></li>
+<li><a href="#dry-principle-of-abstraction">DRY/ Principle of Abstraction</a></li>
+<li><a href="#program-to-an-interface-not-an-implementation">&quot;Program to an 'interface', not an 'implementation'.&quot;</a></li>
+<li><a href="#composition-over-inheritance-favour-object-composition-over-class-inheritance">Composition over inheritance: &quot;Favour 'object composition' over 'class inheritance'.&quot;</a></li>
+<li><a href="#generics-parameterised-types">Generics / Parameterised Types</a></li>
+<li><a href="#pseudo-code">Pseudo code</a></li>
+<li><a href="#object-modelling">Object Modelling</a></li>
+<li><a href="#extensibility">Extensibility</a></li>
+</ul>
+</li>
+<li><a href="#creational-design-patterns">Creational Design Patterns</a>
+<ul>
+<li><a href="#abstract-factory-gof">Abstract factory (GoF)</a></li>
+<li><a href="#builder-gof">Builder (GoF)</a></li>
+<li><a href="#dependency-injection-supports-dependency-inversion">Dependency Injection (supports Dependency Inversion)</a></li>
+<li><a href="#factory-method-gof">Factory Method (GoF)</a></li>
+<li><a href="#lazy-initialization">Lazy initialization</a></li>
+<li><a href="#multiton">Multiton</a></li>
+<li><a href="#object-pool">Object Pool</a></li>
+<li><a href="#prototype-gof">Prototype (GoF)</a></li>
+<li><a href="#singleton-gof">Singleton (GoF)</a></li>
+</ul>
+</li>
+<li><a href="#structural-design-patterns">Structural Design Patterns</a>
+<ul>
+<li><a href="#cqrs">CQRS</a></li>
+<li><a href="#adapter-wrapper-or-translator-gof">Adapter, Wrapper, or Translator (GoF)</a></li>
+<li><a href="#bridgehandlebody-gof">Bridge/Handle/Body (GoF)</a></li>
+<li><a href="#decorator-gof">? Decorator (GoF)</a></li>
+<li><a href="#extension-object">Extension Object</a></li>
+<li><a href="#fa%C3%A7ade-gof">? Façade (GoF)</a></li>
+<li><a href="#flyweight-gof">? Flyweight (GoF)</a></li>
+<li><a href="#front-controller">? Front controller</a></li>
+<li><a href="#marker">? Marker</a></li>
+<li><a href="#module">Module</a></li>
+<li><a href="#proxy">? Proxy</a></li>
+<li><a href="#twin">Twin</a></li>
+<li><a href="#composite-gof">Composite (GoF)</a></li>
+</ul>
+</li>
+<li><a href="#behavioural-design-patterns">Behavioural Design Patterns</a>
+<ul>
+<li><a href="#event-sourcing">Event Sourcing</a></li>
+<li><a href="#blackboard">? Blackboard</a></li>
+<li><a href="#chain-of-responsibility">Chain of Responsibility</a></li>
+<li><a href="#command">Command</a></li>
+<li><a href="#interpreter">? Interpreter</a></li>
+<li><a href="#iterator">Iterator</a></li>
+<li><a href="#mediator">? Mediator</a></li>
+<li><a href="#memento">? Memento</a></li>
+<li><a href="#null-object">? Null Object</a></li>
+<li><a href="#observerpublish-subscribe">Observer/Publish Subscribe</a></li>
+<li><a href="#servant">? Servant</a></li>
+<li><a href="#specification">? Specification</a></li>
+<li><a href="#state">? State</a></li>
+<li><a href="#strategy">Strategy</a></li>
+<li><a href="#template-method">Template Method</a></li>
+<li><a href="#visitor">? Visitor</a></li>
+<li><a href="#repository-pattern">Repository Pattern</a></li>
+<li><a href="#pluginmicrokernel">Plugin/Microkernel</a></li>
+</ul>
+</li>
+<li><a href="#concurrency-design-patterns">Concurrency Design Patterns</a>
+<ul>
+<li><a href="#active-object">? Active Object</a></li>
+<li><a href="#balking">? Balking</a></li>
+<li><a href="#binding-properties">Binding properties</a></li>
+<li><a href="#blockchain">? Blockchain</a></li>
+<li><a href="#double-checked-locking">? Double-checked locking</a></li>
+<li><a href="#event-based-asynchronous">? Event-based asynchronous</a></li>
+<li><a href="#guarded-suspension">? Guarded Suspension</a></li>
+<li><a href="#join">? Join</a></li>
+<li><a href="#lock">Lock</a></li>
+<li><a href="#messaging-design-pattern-mdp">? Messaging design pattern (MDP)</a></li>
+<li><a href="#monitor-object">? Monitor object</a></li>
+<li><a href="#reactor">? Reactor</a></li>
+<li><a href="#read-write-lock">? Read-write lock</a></li>
+<li><a href="#scheduler">? Scheduler</a></li>
+<li><a href="#thread-pool">.Thread Pool</a></li>
+<li><a href="#thread-specific-storage">Thread-Specific Storage</a></li>
+</ul>
+</li>
+<li><a href="#anti-patterns">Anti-Patterns</a>
+<ul>
+<li><a href="#service-locator-pattern">Service Locator Pattern</a></li>
+<li><a href="#bikeshedding">Bikeshedding</a></li>
+</ul>
+</li>
+<li><a href="#testing">Testing</a>
+<ul>
+<li><a href="#unit-testing">Unit Testing</a></li>
+<li><a href="#integration-testing">Integration Testing</a></li>
+<li><a href="#behaviour-testing">Behaviour Testing</a></li>
+<li><a href="#penetration-testing">Penetration testing</a></li>
+<li><a href="#faking">Faking</a></li>
+<li><a href="#mocking">Mocking</a></li>
+<li><a href="#stubbing">Stubbing</a></li>
+</ul>
+</li>
+<li><a href="#formatting">Formatting</a>
+<ul>
+<li><a href="#cases">Cases</a></li>
+<li><a href="#use-smart-variables">Use smart variables</a></li>
+<li><a href="#avoid-magic-numbers">Avoid magic numbers</a></li>
+<li><a href="#methods-and-classes-for-everything">Methods and classes for everything</a></li>
+<li><a href="#comment-and-comment-well">Comment and comment well</a></li>
+<li><a href="#dont-reinvent-the-wheel">Don't reinvent the wheel</a></li>
+</ul>
+</li>
+<li><a href="#uncategorised">Uncategorised</a>
+<ul>
+<li><a href="#high-cohesion">High Cohesion</a></li>
+<li><a href="#loose-coupling">Loose Coupling</a></li>
+<li><a href="#modular">Modular</a></li>
+<li><a href="#encapsulation">Encapsulation</a></li>
+<li><a href="#session">Session</a></li>
+<li><a href="#caching">Caching</a></li>
+<li><a href="#logging">Logging</a></li>
+<li><a href="#setting-management">Setting management</a></li>
+<li><a href="#timing">Timing</a></li>
+<li><a href="#object-to-object-mapping-auto-mapping">Object to Object Mapping (Auto Mapping)</a></li>
+</ul>
+</li>
+<li><a href="#left-out">Left Out</a>
+<ul>
+<li><a href="#resource-acquisition-is-initialization-raii">Resource acquisition is initialization (RAII)</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a>
+<ul>
+<li><a href="#httpsenwikipediaorgwikiabstract_factory_patternhttpsenwikipediaorgwikiabstract_factory_pattern">https://en.wikipedia.org/wiki/Abstract_factory_pattern</a></li>
+<li><a href="#httpwwwoodesigncomhttpwwwoodesigncom">http://www.oodesign.com/</a></li>
+<li><a href="#httpsenwikipediaorgwikisoftware_design_patternhttpsenwikipediaorgwikisoftware_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a></li>
+<li><a href="#httpsenwikipediaorgwikiarchitectural_patternhttpsenwikipediaorgwikiarchitectural_pattern">https://en.wikipedia.org/wiki/Architectural_pattern</a></li>
+</ul>
+</li>
+<li><a href="#books">Books</a>
+<ul>
+<li><a href="#httpsenwikipediaorgwikithe_pragmatic_programmerhttpsenwikipediaorgwikithe_pragmatic_programmer">https://en.wikipedia.org/wiki/The_Pragmatic_Programmer</a></li>
+<li><a href="#httpsenwikipediaorgwikidesign_patternshttpsenwikipediaorgwikidesign_patterns-by-gang-of-four">https://en.wikipedia.org/wiki/Design_Patterns by Gang of Four</a></li>
+<li><a href="#httpsenwikipediaorgwikicode_completehttpsenwikipediaorgwikicode_complete">https://en.wikipedia.org/wiki/Code_Complete</a></li>
+<li><a href="#httpsmartinfowlercombookseaahtmlhttpsmartinfowlercombookseaahtml-by-martin-fowler">https://martinfowler.com/books/eaa.html by Martin Fowler</a></li>
+</ul>
+</li>
+<li><a href="#courses">Courses</a>
+<ul>
+<li><a href="#source-code-warriorhttpsnew-wwwsecurecodewarriorcomdeveloper">Source Code Warrior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>
