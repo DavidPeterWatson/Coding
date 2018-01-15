@@ -8,7 +8,12 @@ Contents
         - [Functional](#functional)
         - [Declarative](#declarative)
         - [Aspect-oriented](#aspect-oriented)
-    - [Development Methodologies](#development-methodologies)
+    - [Requirements Gathering](#requirements-gathering)
+        - [Event-Storming](#event-storming)
+        - [User Stories](#user-stories)
+        - [Acceptance Criteria](#acceptance-criteria)
+    - [Development Methodologies (organisational & procedural)](#development-methodologies-organisational-procedural)
+        - [Conways Law](#conways-law)
         - [DevOps](#devops)
         - [Agile](#agile)
         - [Extreme](#extreme)
@@ -22,8 +27,8 @@ Contents
             - [See the whole](#see-the-whole)
         - [Kaizen](#kaizen)
         - [Test-driven Development](#test-driven-development)
-        - [Continuous Test-driven Development](#continuous-test-driven-development)
-        - [Behaviour-driven development](#behaviour-driven-development)
+        - [Continuous Test-Driven Development](#continuous-test-driven-development)
+        - [Behaviour-Driven development](#behaviour-driven-development)
         - [Waterfall](#waterfall)
         - [Cowboy](#cowboy)
         - [Abstraction Principle](#abstraction-principle)
@@ -49,6 +54,8 @@ Contents
         - [Canary](#canary)
         - [A/B testing](#ab-testing)
         - [Shadow](#shadow)
+    - [Architectural/Design Techniques](#architecturaldesign-techniques)
+        - [Context Mapping](#context-mapping)
     - [Architectural Patterns](#architectural-patterns)
         - [Blackboard System](#blackboard-system)
         - [Broker Pattern](#broker-pattern)
@@ -164,10 +171,15 @@ Contents
         - [Methods and classes for everything](#methods-and-classes-for-everything)
         - [Comment and comment well](#comment-and-comment-well)
         - [Don't reinvent the wheel](#dont-reinvent-the-wheel)
+    - [Tooling](#tooling)
+        - [VSCode](#vscode)
+        - [Powershell Core](#powershell-core)
     - [Uncategorised](#uncategorised)
+        - [Bounded Context](#bounded-context)
         - [High Cohesion](#high-cohesion)
         - [Loose Coupling](#loose-coupling)
         - [Modular](#modular)
+        - [Fluent Interface](#fluent-interface)
         - [Encapsulation](#encapsulation)
         - [Session](#session)
         - [Caching](#caching)
@@ -204,25 +216,13 @@ Contents
 
 ### Aspect-oriented
 
-## Development Methodologies
+## Requirements Gathering
 
-### DevOps
+### Event-Storming
 
-Calms
+http://ziobrando.blogspot.co.za/2013/11/introducing-event-storming.html
 
-1. Culture
-2. Automation
-3. Lean
-4. Measurement
-5. Sharing
-
-What to do with legacy QA? [https://www.infoworld.com/article/3238085/devops/legacy-qa-in-the-devops-age-reskill-them-or-release-them.html](https://www.infoworld.com/article/3238085/devops/legacy-qa-in-the-devops-age-reskill-them-or-release-them.html)
-
-### Agile
-
-Ceremonies ?
-
-User Stories
+### User Stories
 
 Story Criteria
 Our stories should be written using Bill Wake's INVEST criteria where possible. I say where possible, as I believe often in order to create smaller stories you need to violate the "Independent" rule, for example
@@ -242,7 +242,11 @@ Example:
 
 Using this format allows us to understand clearly why we are doing the work.
 
-Acceptance Criteria
+### Acceptance Criteria
+
+Gherkin
+
+
 Stories should have criteria that lets us understand when it will be accepted as complete. We probably won't have time in the inception to clearly define all of these, but can jot down notes. In the end, the
 acceptance criteria should be written as follows:
 Given <scenario>
@@ -258,6 +262,32 @@ These can be easily read by developers, BAs and testers, and test scenarios can 
 
 
 https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/
+http://itsadeliverything.com/seven-things-to-do-when-starting-specification-by-example-with-cucumber#more-6224
+
+
+## Development Methodologies (organisational & procedural)
+
+
+### Conways Law
+
+Conway's Law asserts that the structure of the organization, and the communication paths it facilitates and inhibits, are powerful, even determining, shapers of the system. I paraphrase it thusly: "if the architecture of the system and the architecture of the organization are at odds, the architecture of the organization wins." Recognizing that's a law, like gravity, then, we can play along with it, and use team boundaries to maintain component or microservice boundaries, by lining them up. - [Ruth Malan](http://www.ruthmalan.com/journal/journalcurrent.htm)
+
+### DevOps
+
+Calms
+
+1. Culture
+2. Automation
+3. Lean
+4. Measurement
+5. Sharing
+
+What to do with legacy QA? [https://www.infoworld.com/article/3238085/devops/legacy-qa-in-the-devops-age-reskill-them-or-release-them.html](https://www.infoworld.com/article/3238085/devops/legacy-qa-in-the-devops-age-reskill-them-or-release-them.html)
+
+### Agile
+
+Ceremonies ?
+
 
 
 
@@ -335,11 +365,17 @@ Japanese. Kaizen refers to activities that continuously improve all functions an
 
 Relies on the repetition of a very short development cycle: Requirements are turned into very specific test cases, then the software is improved to pass the new tests, only. This is opposed to software development that allows software to be added that is not proven to meet requirements.
 
-### Continuous Test-driven Development
+### Continuous Test-Driven Development
 
 Automated Test-driven Development. Feature available on GitHub and visual studio team services.
 
-### Behaviour-driven development
+### Behaviour-Driven development
+
+http://itsadeliverything.com/tag/specification-by-example
+Cucumber
+http://itsadeliverything.com/seven-things-to-do-when-starting-specification-by-example-with-cucumber#more-6224
+
+
 ### Waterfall
 
 Old school big design up front.
@@ -557,6 +593,12 @@ Cons:
 - Not a true user test and can be misleading.
 - Complex to setup.
 - Requires mocking service for certain cases.
+
+## Architectural/Design Techniques
+
+### Context Mapping
+
+http://www.apiacademy.co/designing-a-system-of-microservices/
 
 ## Architectural Patterns
 
@@ -1190,9 +1232,26 @@ This saves a lot of time when building something complex. What's more, is that i
 
 Of course, it's very important that you always give credit where it's due and only use code with a Creative Commons license.
 
+## Tooling
+
+### VSCode
+
+
+### Powershell Core
+
+https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-powershell-core-on-macos-and-linux?view=powershell-5.1
+
 ## Uncategorised
 
+### Bounded Context
 
+Related to Microservices. Provides a tool for dividing a monolith into services.
+
+http://flow-design.org/overview/incremental-requirements-decomposition/bounded-contexts/
+
+http://microservices.io/patterns/decomposition/decompose-by-business-capability.html
+
+http://blog.xebia.com/microservices-architecture-principle-3-small-bounded-contexts-over-one-comprehensive-model/
 
 ### High Cohesion
 
@@ -1201,7 +1260,8 @@ Of course, it's very important that you always give credit where it's due and on
 In  [software engineering](https://en.wikipedia.org/wiki/Software_engineering), coupling is the degree of interdependence between software modules; a measure of how closely connected two routines or modules are; the strength of the relationships between modules.
 
 ### Modular
-2. 135.Fluent Interface
+
+### Fluent Interface
 
 Method for constructing object oriented APIs, where the readability of the source code is close to that of ordinary written prose.
 
