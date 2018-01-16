@@ -1281,6 +1281,11 @@ Refers to the bundling of data with the methods that operate on that data. [5] E
 
 ### Object to Object Mapping (Auto Mapping)
 
+### Ubuntu Installation
+
+sudo apt install git
+
+
 
 ## Left Out
 
