@@ -1234,6 +1234,37 @@ Of course, it's very important that you always give credit where it's due and on
 
 ## Tooling
 
+### GraphQL
+
+Query language for apis
+
+https://hackernoon.com/how-to-implement-generic-queries-by-combining-entityframework-core-and-graphql-net-77ac8faf4a22
+
+### MonoDraw
+
+https://monodraw.helftone.com/
+
+### ZenUML
+
+https://www.zenuml.com/?ref=gist
+
+### Pandoc
+
+http://pandoc.org
+
+
+### PlantUML
+
+https://gist.github.com/mrk21/001f13f3f394edd19f21999e9da258c3
+https://marketplace.atlassian.com/plugins/de.griffel.confluence.plugins.plant-uml/server/overview
+
+### UML
+
+https://gravizo.com
+https://gitlab.com/gitlab-org/gitlab-ce/issues/4048
+https://github.com/htssouza/plantuml_with_gravizo
+
+
 ### VSCode
 
 
