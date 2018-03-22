@@ -172,9 +172,16 @@ Contents
         - [Comment and comment well](#comment-and-comment-well)
         - [Don't reinvent the wheel](#dont-reinvent-the-wheel)
     - [Tooling](#tooling)
+        - [GraphQL](#graphql)
+        - [MonoDraw](#monodraw)
+        - [ZenUML](#zenuml)
+        - [Pandoc](#pandoc)
+        - [PlantUML](#plantuml)
+        - [UML](#uml)
         - [VSCode](#vscode)
         - [Powershell Core](#powershell-core)
     - [Uncategorised](#uncategorised)
+        - [Devops Tools](#devops-tools)
         - [Bounded Context](#bounded-context)
         - [High Cohesion](#high-cohesion)
         - [Loose Coupling](#loose-coupling)
@@ -187,20 +194,22 @@ Contents
         - [Setting management](#setting-management)
         - [Timing](#timing)
         - [Object to Object Mapping (Auto Mapping)](#object-to-object-mapping-auto-mapping)
+        - [Ubuntu Installation](#ubuntu-installation)
     - [Left Out](#left-out)
         - [Resource acquisition is initialization (RAII)](#resource-acquisition-is-initialization-raii)
     - [References](#references)
-        - [[https://en.wikipedia.org/wiki/Abstract\_factory\_pattern](https://en.wikipedia.org/wiki/Abstract_factory_pattern)](#httpsenwikipediaorgwikiabstractfactorypatternhttpsenwikipediaorgwikiabstractfactorypattern)
-        - [[http://www.oodesign.com/](http://www.oodesign.com/)](#httpwwwoodesigncomhttpwwwoodesigncom)
-        - [[https://en.wikipedia.org/wiki/Software\_design\_pattern](https://en.wikipedia.org/wiki/Software_design_pattern)](#httpsenwikipediaorgwikisoftwaredesignpatternhttpsenwikipediaorgwikisoftwaredesignpattern)
-        - [[https://en.wikipedia.org/wiki/Architectural\_pattern](https://en.wikipedia.org/wiki/Architectural_pattern)](#httpsenwikipediaorgwikiarchitecturalpatternhttpsenwikipediaorgwikiarchitecturalpattern)
+        - [https://en.wikipedia.org/wiki/Abstract\_factory\_pattern](#httpsenwikipediaorgwikiabstractfactorypattern)
+        - [http://www.oodesign.com/](#httpwwwoodesigncom)
+        - [https://en.wikipedia.org/wiki/Software\_design\_pattern](#httpsenwikipediaorgwikisoftwaredesignpattern)
+        - [https://en.wikipedia.org/wiki/Architectural\_pattern](#httpsenwikipediaorgwikiarchitecturalpattern)
     - [Books](#books)
-        - [[https://en.wikipedia.org/wiki/The\_Pragmatic\_Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)](#httpsenwikipediaorgwikithepragmaticprogrammerhttpsenwikipediaorgwikithepragmaticprogrammer)
-        - [[https://en.wikipedia.org/wiki/Design\_Patterns](https://en.wikipedia.org/wiki/Design_Patterns) by Gang of Four](#httpsenwikipediaorgwikidesignpatternshttpsenwikipediaorgwikidesignpatterns-by-gang-of-four)
-        - [[https://en.wikipedia.org/wiki/Code\_Complete](https://en.wikipedia.org/wiki/Code_Complete)](#httpsenwikipediaorgwikicodecompletehttpsenwikipediaorgwikicodecomplete)
-        - [[https://martinfowler.com/books/eaa.html](https://martinfowler.com/books/eaa.html) by Martin Fowler](#httpsmartinfowlercombookseaahtmlhttpsmartinfowlercombookseaahtml-by-martin-fowler)
+        - [https://en.wikipedia.org/wiki/The\_Pragmatic\_Programmer](#httpsenwikipediaorgwikithepragmaticprogrammer)
+        - [https://en.wikipedia.org/wiki/Design\_Patterns by Gang of Four](#httpsenwikipediaorgwikidesignpatterns-by-gang-of-four)
+        - [https://en.wikipedia.org/wiki/Code\_Complete](#httpsenwikipediaorgwikicodecomplete)
+        - [https://martinfowler.com/books/eaa.html by Martin Fowler](#httpsmartinfowlercombookseaahtml-by-martin-fowler)
     - [Courses](#courses)
-        - [[Source Code Warrior](https://new-www.securecodewarrior.com/developer/)](#source-code-warriorhttpsnew-wwwsecurecodewarriorcomdeveloper)
+        - [Source Code Warrior](#source-code-warrior)
+        - [Microservices with .net Core](#microservices-with-net-core)
 
 
 
@@ -1274,6 +1283,10 @@ https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-powershel
 
 ## Uncategorised
 
+### Devops Tools
+
+[Periodic Table of Devops Tools](https://xebialabs.com/periodic-table-of-devops-tools/)
+
 ### Bounded Context
 
 Related to Microservices. Provides a tool for dividing a monolith into services.
@@ -1315,7 +1328,6 @@ Refers to the bundling of data with the methods that operate on that data. [5] E
 ### Ubuntu Installation
 
 sudo apt install git
-
 
 
 ## Left Out
@@ -1362,10 +1374,8 @@ Other reading
 
 [https://en.wikipedia.org/wiki/The\_Mythical\_Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)
 
-
 ## Courses
 
 ### [Source Code Warrior](https://new-www.securecodewarrior.com/developer/)
 
-
-
+### [Microservices with .net Core](https://www.manning.com/books/microservices-in-net-core)
